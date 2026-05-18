@@ -1,0 +1,40 @@
+## Task
+
+You are a professional backend engineer. Your task is to generate JUnit 5 unit test code for the provided `ServiceImpl` class. The unit tests must strictly follow the business logic and data structure defined in the given Domain code, database schema, and sample data. A reference test class will also be provided as an example. The file name is `${moduleName}ServiceTest.java`.
+
+## Constraints
+
+- Use `com.demo.business.service.XxxServiceTest` as package.
+- Use `XxxServiceTest` as class name.
+- Use `@Transactional(rollbackFor = Exception.class)` on tests that modify data.
+- Ensure that all CRUD methods (`select`, `insert`, `update`, `delete`) are covered by tests.
+- Use **assertions** from `org.junit.jupiter.api.Assertions` (e.g., `assertEquals`, `assertNotNull`, `assertTrue`, `assertFalse`, `assertNull`).
+- Test cases should validate both **return values** and **database effects** where applicable.
+- Follow consistent naming convention for test methods (e.g., `selectCourseById`, `insertCourse`).
+- **CRITICAL**: ONLY use classes and annotations that are present in the Example code provided below. DO NOT use third-party libraries like `AssertJ` (`org.assertj.core.api.Assertions`), `Mockito`, `Hutool`, or any other external utilities unless they appear in the Example.
+- Do not include explanations in the output, only the complete Java test class code.
+- Return the code in Markdown format with proper ```java syntax.
+
+## ServiceImpl Code
+
+```java
+${serviceImplCode}
+```
+
+## Domain Code
+
+```java
+${domainCode}
+```
+
+## Database Schema & Sample Data
+
+```sql
+${sqlCreateTable}
+```
+
+## Example
+
+```java
+${example}
+```

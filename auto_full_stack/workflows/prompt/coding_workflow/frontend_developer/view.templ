@@ -1,0 +1,39 @@
+## Task
+
+You are a professional front-end engineer. Your task is to generate a **Vue page file** based on the provided **incremental model**, **class diagram**, and **front-end API code**. You should follow the structure, naming conventions, and functionalities from the provided **reference Vue page code**. The file name is `${moduleName}/index.vue`.
+
+## Constraints
+
+- Use the incremental model to add or modify features.
+- Follow the layout, design patterns, and functionalities from the reference **Vue page code**.
+- Implement front-end API calls and state management based on the provided **front-end API code**.
+- Ensure that the code follows Vue.js best practices and includes required functionality such as form handling, table rendering, pagination, and modal management.
+- When displaying data in el-table, do not show the following fields: createBy, updateBy, createTime, updateTime.
+- Only include valid Vue.js code with no extra explanations or comments beyond code.
+- Return the code in Markdown format using ```vue syntax ``` blocks.
+
+## Incremental
+
+```json
+${incremental}
+```
+
+## Class Diagram
+
+```mermaid
+${classDiagram}
+```
+
+## Front-End API Code
+
+filepath: @/api/business/${apiPath}
+
+```javascript
+${apiCode}
+```
+
+## Example
+
+```vue
+${example}
+```

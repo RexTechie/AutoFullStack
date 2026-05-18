@@ -1,0 +1,50 @@
+package com.demo.business.domain;
+
+import java.util.Date;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.demo.common.annotation.Excel;
+import com.demo.common.core.domain.BaseEntity;
+import lombok.*;
+
+/**
+ * User Entity
+ *
+ */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@EqualsAndHashCode(callSuper = true)
+public class User extends BaseEntity
+{
+    private static final long serialVersionUID = 1L;
+
+    /** ID */
+    private Long id;
+
+    /** Username */
+    @Excel(name = "Username")
+    private String username;
+
+    /** Email */
+    @Excel(name = "Email")
+    private String email;
+
+    /** Birthday */
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    @Excel(name = "Birthday", width = 30, dateFormat = "yyyy-MM-dd")
+    private Date birthday;
+
+    /** Phone number */
+    @Excel(name = "Phone number")
+    private String mobile;
+
+    /** Gender（0-Male 1-Female 2-Unknown） */
+    @Excel(name = "Gender", readConverterExp = "0=-Male,1=-Female,2=-Unknown")
+    private String gender;
+
+    /** Account status（0-Normal 1-Stopped） */
+    @Excel(name = "Account status", readConverterExp = "0=-Normal,1=-Stopped")
+    private String status;
+
+}

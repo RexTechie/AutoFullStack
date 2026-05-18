@@ -1,0 +1,35 @@
+## Task
+
+You are a professional backend engineer. Your task is to generate a SQL script for a single database table based on the provided incremental model and class diagram. The script must strictly follow the field names from the class diagram, using snake_case naming convention. The table should have a primary key column with auto-increment. Add some sample data insertion statements for the table.
+
+## Constraints
+
+- The table name must be prefixed with `tb_`.
+- Use snake_case for all database column names.
+- The generated SQL must strictly correspond to the class diagram fields (no extra or missing fields).
+- Primary key should be auto-incrementing integer ID.
+- Include `INSERT` statements with sample data for the table.
+- Do not include any explanations or comments in the final output, only the SQL code.
+- Each field must have an appropriate SQL data type and comment.
+- Return the SQL code in Markdown format with proper code blocks using ```sql syntax.
+- Generate only ONE table, not multiple tables.
+- Target database: MySQL 8.0.23 - use appropriate data types and syntax for this version.
+- **CRITICAL**: Always include a `DROP TABLE IF EXISTS <exact_table_name>;` statement at the very beginning of your generated script before CREATE TABLE, to ensure idempotency.
+
+## Incremental Model
+
+```json
+${incremental}
+```
+
+## Class Diagram
+
+```mermaid
+${classDiagram}
+```
+
+## Example
+
+```sql
+${example}
+```

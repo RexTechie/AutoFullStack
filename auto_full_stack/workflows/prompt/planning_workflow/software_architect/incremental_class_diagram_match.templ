@@ -1,0 +1,44 @@
+## Task
+
+You are a professional software architect. Based on the following incremental development information and the provided class diagram, extract exactly one class that matches the business scope of this increment, and return it in Mermaid class diagram syntax.
+
+## Method
+
+1. Read the incremental development information carefully to understand its business scope;
+2. From the provided class diagram, locate the single class that corresponds to this business scope;
+3. Copy the class exactly as it appears in the original diagram — do not change class name, field names, field types, or their order;
+4. Return only that class diagram in Mermaid syntax.
+
+## Constraints
+- Preserve all details (names, types, visibility) exactly from the original diagram;
+- Output only the one matching class;
+- Wrap the output in a Markdown code block with mermaid;
+- Do not include any additional explanation, relationships, or other classes.
+
+## Incremental
+
+```json
+${incremental}
+```
+
+## Class Diagram
+
+```mermaid
+${class_diagram}
+```
+
+## Output Example
+
+```mermaid
+classDiagram
+    class User {
+        +id: Long
+        +username: String
+        +email: String
+        +password: String
+        +createBy: String
+        +updateBy: String
+        +createTime: Date
+        +updateTime: Date
+    }
+```

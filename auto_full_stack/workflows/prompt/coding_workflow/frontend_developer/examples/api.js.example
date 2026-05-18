@@ -1,0 +1,44 @@
+import request from '@/utils/request'
+
+// Query user list.
+export function listUser(query) {
+  return request({
+    url: '/business/user/list',
+    method: 'get',
+    params: query
+  })
+}
+
+// Query user details.
+export function getUser(id) {
+  return request({
+    url: '/business/user/' + id,
+    method: 'get'
+  })
+}
+
+// Add user.
+export function addUser(data) {
+  return request({
+    url: '/business/user',
+    method: 'post',
+    data: data
+  })
+}
+
+// Update user.
+export function updateUser(data) {
+  return request({
+    url: '/business/user',
+    method: 'put',
+    data: data
+  })
+}
+
+// Delete user.
+export function delUser(id) {
+  return request({
+    url: '/business/user/' + id,
+    method: 'delete'
+  })
+}

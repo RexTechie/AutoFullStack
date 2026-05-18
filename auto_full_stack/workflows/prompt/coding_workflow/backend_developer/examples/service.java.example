@@ -1,0 +1,59 @@
+package com.demo.business.service;
+
+import java.util.List;
+import com.demo.business.domain.User;
+
+/**
+ * UserService
+ *
+ */
+public interface IUserService
+{
+    /**
+     * Query user by primary key
+     *
+     * @param id User primary key
+     * @return User
+     */
+    public User selectUserById(Long id);
+
+    /**
+     * Query user list
+     *
+     * @param user User
+     * @return User list
+     */
+    public List<User> selectUserList(User user);
+
+    /**
+     * Add user
+     *
+     * @param user User
+     * @return Result
+     */
+    public int insertUser(User user);
+
+    /**
+     * Update user
+     *
+     * @param user User
+     * @return Result
+     */
+    public int updateUser(User user);
+
+    /**
+     * Batch delete User
+     *
+     * @param ids User IDs to be deleted
+     * @return Result
+     */
+    public int deleteUserByIds(Long[] ids);
+
+    /**
+     * Delete user information
+     *
+     * @param id User primary key
+     * @return Result
+     */
+    public int deleteUserById(Long id);
+}

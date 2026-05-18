@@ -1,0 +1,100 @@
+## Task
+
+You are a professional software architect. Based on the following requirements document and architecture diagram, extract the main entities (classes), their attributes, and the relationships between them (such as inheritance, association, aggregation, and composition), and generate a corresponding class diagram. Use Mermaid syntax, and include the diagram within a Markdown code block so that it can be rendered directly.
+
+## Method
+
+1. Each class must correspond to a specific module shown in the architecture diagram. Do not create any class not represented as modules in the diagram. Class name exclude "Module" or "Management" suffix.(e.g., Module name is UserModule, class name is User, not UserModule or UserManagement);
+2. Add appropriate attributes to each entity (format: attributeName: Type);
+3. Clearly define relationships between entities, such as:
+    - Inheritance (<|--)
+    - Association (-->)
+    - Aggregation (o-->)
+    - Composition (*-->)
+5. Prefer concise modeling focused on the main responsibilities, avoiding unnecessary complexity.
+
+## Constraints
+
+- Use only the specified Mermaid relationship symbols.
+- **For enumeration fields (such as status, type, gender, state, etc.), use String type and add possible values in double quotes after the field name. Format: fieldName: String "VALUE1, VALUE2, VALUE3". Common enumeration fields include:**
+  - **status**: "ACTIVE, INACTIVE, PENDING, COMPLETED, CANCELLED"
+  - **type**: "ADMIN, USER, GUEST" or "SINGLE, DOUBLE, SUITE" or "ONLINE, OFFLINE"
+  - **gender**: "MALE, FEMALE, OTHER"
+  - **state**: "DRAFT, PUBLISHED, ARCHIVED"
+  - **priority**: "LOW, MEDIUM, HIGH, URGENT"
+  - **enrollmentStatus**: "ENROLLED, DROPPED, GRADUATED"
+- Do not use lists/arrays, maps/dictionaries, sets, generics, union/optional types, or nested/object-valued attributes. Only use basic scalar types: String, Long, Int, Float, Double, Boolean, Date, DateTime.
+- Every entity must have id, createBy, updateBy, createTime, and updateTime attributes.
+- Diagram must be embedded inside the following Markdown code block:
+```mermaid
+classDiagram
+// Place class diagram content here
+```
+- Return only the Mermaid class diagram, without any extra explanation or description.
+
+
+## Requirements Document
+
+```markdown
+${product_requirement}
+
+```
+
+## Architecture Diagram
+
+${architecture_diagram}
+
+## Output example
+
+```mermaid
+classDiagram
+    class User {
+        +id: Long
+        +username: String
+        +email: String
+        +status: String "ACTIVE, INACTIVE"
+        +password: String
+        +createBy: String
+        +updateBy: String
+        +createTime: Date
+        +updateTime: Date
+
+    }
+
+    class Product {
+        +id: Long
+        +name: String
+        +description: String
+        +price: Float
+        +createBy: String
+        +updateBy: String
+        +createTime: Date
+        +updateTime: Date
+    }
+
+    class Order {
+        +id: Long
+        +userId: String
+        +orderDate: DateTime
+        +totalAmount: Float
+        +createBy: String
+        +updateBy: String
+        +createTime: Date
+        +updateTime: Date
+    }
+
+    class Payment {
+        +id: Long
+        +orderId: String
+        +amount: Float
+        +paymentDate: DateTime
+        +createBy: String
+        +updateBy: String
+        +createTime: Date
+        +updateTime: Date
+    }
+
+    User --> Order : places >
+    Order --> Product : contains >
+    Order o--> Payment : has >
+```

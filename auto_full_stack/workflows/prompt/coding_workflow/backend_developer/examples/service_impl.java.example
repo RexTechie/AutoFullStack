@@ -1,0 +1,94 @@
+package com.demo.business.service.impl;
+
+import java.util.List;
+import com.demo.common.utils.DateUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.demo.business.mapper.UserMapper;
+import com.demo.business.domain.User;
+import com.demo.business.service.IUserService;
+
+/**
+ * UserService business layer processing
+ *
+ */
+@Service
+public class UserServiceImpl implements IUserService
+{
+    @Autowired
+    private UserMapper userMapper;
+
+    /**
+     * Query user by primary key
+     *
+     * @param id User primary key
+     * @return User
+     */
+    @Override
+    public User selectUserById(Long id)
+    {
+        return userMapper.selectUserById(id);
+    }
+
+    /**
+     * Query user list
+     *
+     * @param user User
+     * @return User
+     */
+    @Override
+    public List<User> selectUserList(User user)
+    {
+        return userMapper.selectUserList(user);
+    }
+
+    /**
+     * Add user
+     *
+     * @param user User
+     * @return Result
+     */
+    @Override
+    public int insertUser(User user)
+    {
+        user.setCreateTime(DateUtils.getNowDate());
+        return userMapper.insertUser(user);
+    }
+
+    /**
+     * Update user
+     *
+     * @param user User
+     * @return Result
+     */
+    @Override
+    public int updateUser(User user)
+    {
+        user.setUpdateTime(DateUtils.getNowDate());
+        return userMapper.updateUser(user);
+    }
+
+    /**
+     * Batch delete User
+     *
+     * @param ids Primary keys of user to be deleted
+     * @return Result
+     */
+    @Override
+    public int deleteUserByIds(Long[] ids)
+    {
+        return userMapper.deleteUserByIds(ids);
+    }
+
+    /**
+     * Delete user information
+     *
+     * @param id User primary key
+     * @return Result
+     */
+    @Override
+    public int deleteUserById(Long id)
+    {
+        return userMapper.deleteUserById(id);
+    }
+}

@@ -1,0 +1,91 @@
+ProjectID,Category,Approach,Namespace,ProjectName,BackendBuild,FrontendBuild,Notes
+proj_simple_01,Simple,Incremental,personal_contact_mgr,Personal Contact Manager,Pass,Pass,
+proj_simple_02,Simple,Incremental,book_tracker,Book Collection Tracker,Pass,Pass,
+proj_simple_03,Simple,Incremental,recipe_manager,Recipe Manager,Pass,Pass,
+proj_simple_04,Simple,Incremental,event_planner,Event Planner,Pass,Pass,
+proj_simple_05,Simple,Incremental,inventory_tracker,Inventory Tracker,Pass,Failure,"Frontend: Failed to compile."
+proj_simple_06,Simple,Incremental,lib_catalog,Library Catalog,Pass,Pass,
+proj_simple_07,Simple,Incremental,emp_directory,Employee Directory,Pass,Pass,
+proj_simple_08,Simple,Incremental,course_catalog,Course Catalog,Pass,Pass,
+proj_simple_09,Simple,Incremental,prod_catalog,Product Catalog,Pass,Pass,
+proj_simple_10,Simple,Incremental,task_tracker,Task Tracker,Pass,Pass,
+proj_medium_01,Medium,Incremental,student_info_management_system,Student Information Management System,Pass,Pass,
+proj_medium_02,Medium,Incremental,hosp_pt_mgmt_sys,Hospital Patient Management System,Pass,Pass ,
+proj_medium_03,Medium,Incremental,restaurant_mgmt_sys,Restaurant Management System,Pass,Pass,
+proj_medium_04,Medium,Incremental,lib_mgmt_sys,Library Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_medium_05,Medium,Incremental,company_asset_mgmt,Company Asset Management System,Pass,Pass,
+proj_medium_06,Medium,Incremental,hotel_res_sys,Hotel Reservation System,Pass,Pass,
+proj_medium_07,Medium,Incremental,school_mgmt_sys,School Management System,Pass,Pass,
+proj_medium_08,Medium,Incremental,inv_mgmt_sys,Inventory Management System,Pass,Pass,
+proj_medium_09,Medium,Incremental,event_mgmt_sys,Event Management System,Pass,Pass,
+proj_medium_10,Medium,Incremental,proj_mgmt_sys,Project Management System,Pass,Pass,
+proj_complex_01,Complex,Incremental,comprehensive_hospital_management_system,Comprehensive Hospital Management System,Pass,Pass,
+proj_complex_02,Complex,Incremental,adv_uni_mgmt_sys,Advanced University Management System,Pass,Pass,
+proj_complex_03,Complex,Incremental,comprehensive_ecom_management,Comprehensive E-commerce Management System,Pass,Pass,
+proj_complex_04,Complex,Incremental,adv_lib_mgmt_sys,Advanced Library Management System,Pass,Pass,
+proj_complex_05,Complex,Incremental,comprehensive_hotel_mgmt_system,Comprehensive Hotel Management System,Failure,Pass,"Backend: [ERROR] COMPILATION ERROR"
+proj_complex_06,Complex,Incremental,advanced_project_management,Advanced Project Management System,Pass,Pass,
+proj_complex_07,Complex,Incremental,comp_school_mgmt_sys,Comprehensive School Management System,Pass,Pass,
+proj_complex_08,Complex,Incremental,advanced_inventory_manager,Advanced Inventory Management System,Pass,Pass,
+proj_complex_09,Complex,Incremental,comprehensive_event_manager,Comprehensive Event Management System,Pass,Pass,
+proj_complex_10,Complex,Incremental,advanced_crm_system,Advanced Customer Relationship Management System,Pass,Pass,
+proj_simple_01,Simple,Waterfall,personal_contact_manager,Personal Contact Manager,Pass,Pass,
+proj_simple_02,Simple,Waterfall,book_collection_tracker,Book Collection Tracker,Pass,Pass,
+proj_simple_03,Simple,Waterfall,recipe_manager,Recipe Manager,Pass,Pass,
+proj_simple_04,Simple,Waterfall,event_planner,Event Planner,Pass,Pass,
+proj_simple_05,Simple,Waterfall,inv_tracker,Inventory Tracker,Failure,Pass,"Backend: [ERROR] COMPILATION ERROR"
+proj_simple_06,Simple,Waterfall,lib_catalog,Library Catalog,Pass,Pass,
+proj_simple_07,Simple,Waterfall,employee_directory,Employee Directory,Pass,Pass,
+proj_simple_08,Simple,Waterfall,course_catalog,Course Catalog,Pass,Pass,
+proj_simple_09,Simple,Waterfall,product_catalog,Product Catalog,Pass,Pass,
+proj_simple_10,Simple,Waterfall,task_tracker,Task Tracker,Pass,Failure,"Frontend: Failed to compile."
+proj_medium_01,Medium,Waterfall,student_info_manager,Student Information Management System,Pass,Failure,"Frontend: Failed to compile."
+proj_medium_02,Medium,Waterfall,hospital_patient_mgmt,Hospital Patient Management System,Failure,Pass,"Backend: o.s.b.SpringApplication - [reportFailure,857] - Application run failed"
+proj_medium_03,Medium,Waterfall,restaurant_mgmt_sys,Restaurant Management System,Failure,Pass,"Backend: [ERROR] COMPILATION ERROR"
+proj_medium_04,Medium,Waterfall,library_management_system,Library Management System,Pass,Pass,
+proj_medium_05,Medium,Waterfall,company_asset_mgmt,Company Asset Management System,Pass,Pass,
+proj_medium_06,Medium,Waterfall,hotel_reservation_system,Hotel Reservation System,Failure,Pass,"Backend: [ERROR] COMPILATION ERROR"
+proj_medium_07,Medium,Waterfall,school_mgmt_sys,School Management System,Failure,Failure,"Backend: [ERROR] COMPILATION ERROR;Frontend: Failed to compile."
+proj_medium_08,Medium,Waterfall,inv_mgmt_sys,Inventory Management System,Pass,Pass,
+proj_medium_09,Medium,Waterfall,event_mgmt_system,Event Management System,Failure,Pass,"Backend: [ERROR] COMPILATION ERROR"
+proj_medium_10,Medium,Waterfall,proj_mgmt_sys,Project Management System,Failure,Pass,"Backend: [ERROR] COMPILATION ERROR"
+proj_complex_01,Complex,Waterfall,comp_hms,Comprehensive Hospital Management System,Failure,Pass,"Backend: [ERROR] COMPILATION ERROR"
+proj_complex_02,Complex,Waterfall,adv_uni_mgmt_sys,Advanced University Management System,Failure,Failure,"Backend: [ERROR] COMPILATION ERROR;Frontend: Failed to compile."
+proj_complex_03,Complex,Waterfall,comp_ecom_mgmt_sys,Comprehensive E-commerce Management System,Failure,Pass,"Backend: [ERROR] COMPILATION ERROR"
+proj_complex_04,Complex,Waterfall,adv_lib_mgmt_sys,Advanced Library Management System,Pass,Pass,
+proj_complex_05,Complex,Waterfall,comprehensive_hotel_mgmt_sys,Comprehensive Hotel Management System,Failure,Pass,"Backend: [ERROR] COMPILATION ERROR"
+proj_complex_06,Complex,Waterfall,adv_proj_mgmt_sys,Advanced Project Management System,Failure,Pass,"Backend: [ERROR] COMPILATION ERROR"
+proj_complex_07,Complex,Waterfall,comp_school_mgmt_sys,Comprehensive School Management System,Failure,Pass,"Backend: [ERROR] COMPILATION ERROR"
+proj_complex_08,Complex,Waterfall,adv_inv_mgmt_sys,Advanced Inventory Management System,Failure,Pass,"Backend: [ERROR] COMPILATION ERROR"
+proj_complex_09,Complex,Waterfall,comp_event_mgmt_sys,Comprehensive Event Management System,Pass,Pass,
+proj_complex_10,Complex,Waterfall,advanced_crm_system,Advanced Customer Relationship Management System,Pass,Pass,
+proj_simple_01,Simple,Incremental-NoSelfRefinement,personal_contact_manager,Personal Contact Manager,Pass,Pass,
+proj_simple_02,Simple,Incremental-NoSelfRefinement,book_collection_tracker,Book Collection Tracker,Pass,Pass,
+proj_simple_03,Simple,Incremental-NoSelfRefinement,recipe_mgr,Recipe Manager,Pass,Pass,
+proj_simple_04,Simple,Incremental-NoSelfRefinement,event_planner,Event Planner,Failure,Pass,"Backend[INFO] BUILD FAILURE"
+proj_simple_05,Simple,Incremental-NoSelfRefinement,inventory_tracker,Inventory Tracker,Pass,Pass,
+proj_simple_06,Simple,Incremental-NoSelfRefinement,lib_catalog,Library Catalog,Pass,Pass,
+proj_simple_07,Simple,Incremental-NoSelfRefinement,employee_directory,Employee Directory,Pass,Pass,
+proj_simple_08,Simple,Incremental-NoSelfRefinement,course_catalog,Course Catalog,Failure,Pass,"Backend[INFO] BUILD FAILURE"
+proj_simple_09,Simple,Incremental-NoSelfRefinement,product_catalog,Product Catalog,Pass,Pass,
+proj_simple_10,Simple,Incremental-NoSelfRefinement,task_tracker,Task Tracker,Pass,Pass,
+proj_medium_01,Medium,Incremental-NoSelfRefinement,student_info_mgmt_sys,Student Information Management System,Pass,Pass,
+proj_medium_02,Medium,Incremental-NoSelfRefinement,hosp_patient_mgmt,Hospital Patient Management System,Pass,Pass,
+proj_medium_03,Medium,Incremental-NoSelfRefinement,rest_mgmt_sys,Restaurant Management System,Pass,Pass,
+proj_medium_04,Medium,Incremental-NoSelfRefinement,lib_mgmt_sys,Library Management System,Pass,Pass,
+proj_medium_05,Medium,Incremental-NoSelfRefinement,co_asset_mgmt_sys,Company Asset Management System,Pass,Pass,
+proj_medium_06,Medium,Incremental-NoSelfRefinement,hotel_reservation_system,Hotel Reservation System,Pass,Pass,
+proj_medium_07,Medium,Incremental-NoSelfRefinement,school_mgmt_sys,School Management System,Failure,Pass,"Backend[INFO] BUILD FAILURE"
+proj_medium_08,Medium,Incremental-NoSelfRefinement,inventory_manager,Inventory Management System,Pass,Pass,
+proj_medium_09,Medium,Incremental-NoSelfRefinement,event_mgmt_system,Event Management System,Failure,Pass,"Backend[INFO] BUILD FAILURE"
+proj_medium_10,Medium,Incremental-NoSelfRefinement,project_management_system,Project Management System,Pass,Pass,
+proj_complex_01,Complex,Incremental-NoSelfRefinement,comp_hospital_mgmt_sys,Comprehensive Hospital Management System,Failure,Pass,"Backend[INFO] BUILD FAILURE"
+proj_complex_02,Complex,Incremental-NoSelfRefinement,adv_uni_mgmt_sys,Advanced University Management System,Failure,Pass,"Backend[INFO] BUILD FAILURE"
+proj_complex_03,Complex,Incremental-NoSelfRefinement,ecom_mgmt_sys,Comprehensive E-commerce Management System,Pass,Pass,
+proj_complex_04,Complex,Incremental-NoSelfRefinement,advanced_lib_mgmt_sys,Advanced Library Management System,Pass,Pass,
+proj_complex_05,Complex,Incremental-NoSelfRefinement,comprehensive_hotel_mgmt_system,Comprehensive Hotel Management System,Pass,Pass,
+proj_complex_06,Complex,Incremental-NoSelfRefinement,adv_proj_mgmt_sys,Advanced Project Management System,Failure,Pass,"Backend[INFO] BUILD FAILURE"
+proj_complex_07,Complex,Incremental-NoSelfRefinement,comp_school_mgmt_sys,Comprehensive School Management System,Failure,Pass,"Backend[INFO] BUILD FAILURE"
+proj_complex_08,Complex,Incremental-NoSelfRefinement,adv_inv_mgmt_sys,Advanced Inventory Management System,Failure,Pass,"Backend[INFO] BUILD FAILURE"
+proj_complex_09,Complex,Incremental-NoSelfRefinement,comprehensive_event_management_system,Comprehensive Event Management System,Failure,Pass,"Backend[INFO] BUILD FAILURE"
+proj_complex_10,Complex,Incremental-NoSelfRefinement,advanced_crm_system,Advanced Customer Relationship Management System,Pass,Pass,

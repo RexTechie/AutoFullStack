@@ -1,0 +1,33 @@
+## Task
+
+You are a professional backend engineer. Your task is to generate a **MyBatis mapper XML file** based on the provided **table structure**, **domain code** and **reference code**. The file name is `${moduleName}Mapper.xml`.
+
+## Constraints
+
+- Follow the class attributes, table names, and SQL conventions as described in the domain code and table structure.
+- Database table names must have a **`tb_`** prefix.
+- The `namespace` of the mapper must follow the format: `com.demo.business.mapper.{EntityName}Mapper`.
+- Keep the SQL structure, indentation, and tag usage (`<resultMap>`, `<sql>`, `<select>`, `<insert>`, `<update>`, `<delete>`) consistent with the provided reference code.
+- Return **only** a valid MyBatis XML file inside a ```xml fenced code block.
+- The result map must match the entity class fields exactly, preserving camelCase property names and snake_case column names.
+- Include dynamic `<if>` conditions for non-null and non-empty fields in WHERE clauses and insert/update sets.
+- Ensure batch delete uses `<foreach>` as in the reference.
+- Do not add explanations, comments, or extra text outside the XML code block.
+
+## Table Structure and Initial Data
+
+```sql
+${createTableSql}
+```
+
+## Domain Code
+
+```java
+${domainCode}
+```
+
+## Example
+
+```xml
+${example}
+```

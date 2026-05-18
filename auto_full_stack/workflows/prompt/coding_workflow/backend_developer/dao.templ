@@ -1,0 +1,24 @@
+## Task
+
+You are a professional backend engineer. Your task is to generate **Java DAO (Mapper) layer code** based on the provided **MyBatis XML file** and **reference DAO interface code**. The file name is `${moduleName}.java`.
+
+## Constraints
+
+- Follow the method names, parameter types, return types, and JavaDoc style consistent with the provided reference DAO.
+- Each method must include a JavaDoc comment block (`/** ... */`) describing.
+- Ensure the generated DAO interface corresponds exactly to the SQL mappings in the given MyBatis XML file.
+- The package declaration must be exactly: `package com.demo.business.mapper;`
+- Output only valid Java code inside a ```java code block.
+- Do not add extra methods beyond those found in the MyBatis XML file.
+
+## MyBatis XML File
+
+```xml
+${mybatisCode}
+```
+
+## Reference DAO Interface Code
+
+```java
+${example}
+```

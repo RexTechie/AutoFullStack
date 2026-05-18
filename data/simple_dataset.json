@@ -1,0 +1,42 @@
+[
+    {
+        "project_name": "Personal Contact Manager",
+        "project_description": "Please help me create a personal contact management system. This system includes a contact management module. Contact management enables users to add, edit, delete and view contact information. Contacts contain information such as name, phone number, email address, and address."
+    },
+    {
+        "project_name": "Book Collection Tracker",
+        "project_description": "Please help me create a book collection tracking system. This system includes a book management module. Book management enables users to add, edit, delete and view book information. Books contain information such as title, author, ISBN, publication year, and reading status."
+    },
+    {
+        "project_name": "Recipe Manager",
+        "project_description": "Please help me create a recipe management system. This system includes a recipe management module. Recipe management enables users to add, edit, delete and view recipe information. Recipes contain information such as name, ingredients, cooking instructions, preparation time, and difficulty level."
+    },
+    {
+        "project_name": "Event Planner",
+        "project_description": "Please help me create an event planning system. This system includes an event management module. Event management enables users to create, edit, delete and view event information. Events contain information such as title, date, time, location, description, and attendee list."
+    },
+    {
+        "project_name": "Inventory Tracker",
+        "project_description": "Please help me create an inventory tracking system. This system includes an inventory management module. Inventory management enables users to add, edit, delete and view item information. Items contain information such as name, category, quantity and price."
+    },
+    {
+        "project_name": "Library Catalog",
+        "project_description": "Please help me create a library catalog system. This system includes a book catalog module. Book catalog management enables users to add, edit, delete and view book records. Books contain information such as title, author, ISBN, publication date, genre, and availability status."
+    },
+    {
+        "project_name": "Employee Directory",
+        "project_description": "Please help me create an employee directory system. This system includes an employee management module. Employee management enables users to add, edit, delete and view employee information. Employees contain information such as name, department, position, email, phone number, and hire date."
+    },
+    {
+        "project_name": "Course Catalog",
+        "project_description": "Please help me create a course catalog system. This system includes a course management module. Course management enables users to add, edit, delete and view course information. Courses contain information such as course code, title, description, credits, instructor, and schedule."
+    },
+    {
+        "project_name": "Product Catalog",
+        "project_description": "Please help me create a product catalog system. This system includes a product management module. Product management enables users to add, edit, delete and view product information. Products contain information such as name, description, category, price and stock quantity."
+    },
+    {
+        "project_name": "Task Tracker",
+        "project_description": "Please help me create a task tracking system. This system includes a task management module. Task management enables users to create, edit, delete and view task information. Tasks contain information such as title, description, priority, due date, status, and assigned person."
+    }
+]

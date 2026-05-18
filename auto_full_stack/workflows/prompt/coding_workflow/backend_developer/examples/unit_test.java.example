@@ -1,0 +1,79 @@
+package com.demo.business.service;
+
+import com.demo.business.domain.User;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.Date;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+/**
+ * Description: UserServiceTest
+ *
+ */
+@SpringBootTest
+public class UserServiceTest {
+
+    @Autowired
+    private IUserService userService;
+
+    @Test
+    public void selectUserById() {
+        User user = userService.selectUserById(1L);
+        assertNotNull(user, "User should not be null");
+    }
+
+    @Test
+    public void selectUserList() {
+        List<User> list = userService.selectUserList(new User());
+        assertFalse(list.isEmpty(), "User list should not be empty");
+    }
+
+    @Test
+    @Transactional(rollbackFor = Exception.class)
+    public void insertUser() {
+        User user = new User();
+        user.setUsername("Monica");
+        user.setEmail("monica@gmail.com");
+        user.setBirthday(new Date());
+        user.setMobile("12345678912");
+        user.setGender("0");
+        user.setCreateBy("admin");
+        user.setUpdateBy("admin");
+        user.setCreateTime(new Date());
+        user.setUpdateTime(new Date());
+
+        int result = userService.insertUser(user);
+        assertEquals(1, result, "Insert operation should return 1");
+    }
+
+    @Test
+    @Transactional(rollbackFor = Exception.class)
+    public void updateUser() {
+        User user = new User();
+        user.setId(1L);
+        user.setEmail("jerry@example.com");
+
+        int result = userService.updateUser(user);
+        assertEquals(1, result, "Update operation should return 1");
+    }
+
+    @Test
+    @Transactional(rollbackFor = Exception.class)
+    public void deleteUserById() {
+        int result = userService.deleteUserById(2L);
+        assertEquals(1, result, "Delete operation should return 1");
+    }
+
+    @Test
+    @Transactional(rollbackFor = Exception.class)
+    public void deleteUserByIds() {
+        Long[] ids = {1L};
+        int result = userService.deleteUserByIds(ids);
+        assertEquals(1, result, "Batch delete operation should return 1");
+    }
+}

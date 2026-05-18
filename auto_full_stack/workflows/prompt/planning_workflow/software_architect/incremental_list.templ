@@ -1,0 +1,66 @@
+## Task
+
+You are a professional software architect. Your task is to generate an incremental implementation list for a software project based on the provided requirements document and architecture diagram. Each increment should be logically ordered, feasible for implementation, and maintainable. Ensure that each item clearly indicates dependencies, priorities, and estimated complexity.
+
+## Constraints
+
+- Output only includes id, name, description, dependencies, priority and module_name for each increment.
+- The field `module_name` should correspond to the module name in the architecture diagram. `module_name` exclude "Module" or "Management" suffix.
+- Every project have Basic Framework Setup increment. This increment should include setting up the initial project structure, including user authentication and database connection. The Basic Framework Setup increment should have no dependencies and should be marked as high priority.The Basic Framework Setup increment does not include `module_name` field.
+- The generated incremental list must align with the provided architecture diagram. Each increment (except Basic Framework Setup) must correspond to a specific module shown in the architecture diagram. Only create increments for modules explicitly mentioned in the architecture diagram. Do not create increments for infrastructure components, database setup, or any other items not represented as modules in the diagram.
+- CRUD Operations Aggregation Rule: For each module in the architecture diagram, if the module requires basic CRUD operations (Create, Read, Update, Delete), combine all these operations into a single increment named "[ModuleName] Management". Only create separate increments when the module has distinct business processes or complex workflows that are independent of basic CRUD operations.
+- Dependencies between increments must be explicit.
+- The description of each increment should be strictly based on the requirements document.
+- Prioritize increments based on their importance to the overall project goals.
+- Return only the incremental list in a JSON code block with no extra explanation.
+
+## Requirements Document
+
+```markdown
+${product_requirement}
+```
+
+## Architecture Diagram
+
+```mermaid
+${architecture_diagram}
+```
+
+## Output example
+```json
+[{
+  "id": 1,
+  "name": "Basic Framework Setup",
+  "description": "Set up the initial project structure, including user authentication and database connection.",
+  "dependencies": [],
+  "priority": "high"
+},{
+  "id": 2,
+  "name": "Student Management",
+  "description": "Implement student info CRUD operations.",
+  "dependencies": [1],
+  "priority": "medium",
+  "module_name": "Student",
+},{
+  "id": 3,
+  "name": "Course Management",
+  "description": "Implement course info CRUD operations.",
+  "dependencies": [1],
+  "priority": "medium",
+  "module_name": "Course",
+},{
+  "id": 4,
+  "name": "Enrollment Management",
+  "description": "Implement enrollment functionalities, allowing students to enroll in courses.",
+  "dependencies": [1, 2, 3],
+  "priority": "medium",
+  "module_name": "Enrollment",
+},{
+  "id": 5,
+  "name": "Grade Management",
+  "description": "Implement grade recording and retrieval functionalities.",
+  "dependencies": [1, 2, 3],
+  "priority": "medium",
+  "module_name": "Grade",
+}]
+```

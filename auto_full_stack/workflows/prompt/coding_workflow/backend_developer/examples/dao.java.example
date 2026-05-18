@@ -1,0 +1,59 @@
+package com.demo.business.mapper;
+
+import java.util.List;
+import com.demo.business.domain.User;
+
+/**
+ * UserMapper
+ *
+ */
+public interface UserMapper
+{
+    /**
+     * Query User
+     *
+     * @param id User primary key
+     * @return User
+     */
+    public User selectUserById(Long id);
+
+    /**
+     * Query user list
+     *
+     * @param user User
+     * @return User collection
+     */
+    public List<User> selectUserList(User user);
+
+    /**
+     * Add user
+     *
+     * @param user User
+     * @return Result
+     */
+    public int insertUser(User user);
+
+    /**
+     * Update User
+     *
+     * @param user User
+     * @return Result
+     */
+    public int updateUser(User user);
+
+    /**
+     * Delete User
+     *
+     * @param id User primary key
+     * @return Result
+     */
+    public int deleteUserById(Long id);
+
+    /**
+     * Delete user batch
+     *
+     * @param ids The collection of primary keys for the data to be deleted
+     * @return Result
+     */
+    public int deleteUserByIds(Long[] ids);
+}

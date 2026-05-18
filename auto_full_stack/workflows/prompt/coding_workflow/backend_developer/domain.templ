@@ -1,0 +1,23 @@
+## Task
+
+You are a professional backend engineer. Your task is to generate **Java domain layer code** based on the provided **table structure** and **reference code**. The file name is `${moduleName}Mapper.java`.
+
+## Constraints
+
+- Do not include explanations or comments — only valid Java code in the final output.
+- Return the Java code in Markdown format using ```java syntax ``` blocks.
+- Do NOT duplicate fields already present in BaseEntity (searchValue, createBy, createTime, updateBy, updateTime, remark, params). Only add fields that are specific to the domain entity. If a field in the table structure corresponds to a BaseEntity field, skip it in the generated code.
+- Every field must have a @Excel(name = "xxx") annotation with appropriate name attribute.
+- Every field must have a comment above it using /** */ format.
+- For Date type fields, must include @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss") annotation and @Excel(name = "xxx", width = 30, dateFormat = "yyyy-MM-dd HH:mm:ss").
+
+## Table Structure and Initial Data
+
+```sql
+${createTableSql}
+```
+
+## Example
+```java
+${example}
+```

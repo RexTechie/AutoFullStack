@@ -1,0 +1,37 @@
+## Task
+
+You are a professional backend engineer. Your task is to generate a **Java Controller class** based on the provided **incremental list**, **Service interface code**, and **domain layer code**. The file name is `${moduleName}Controller.java`.
+
+## Constraints
+
+- Follow the method definitions and naming conventions from the Service interface.
+- Ensure the class and method JavaDoc comments follow the style in the provided reference Controller implementation.
+- The package declaration must be exactly: `package com.demo.business.controller;`
+- Permission codes in `@PreAuthorize` annotations must use **snake_case** naming for the last segment after the final colon. Example: `business:student_course:edit` (not `studentCourse`)
+- API paths in `@RequestMapping` and related `@*Mapping` annotations must use **snake_case** naming. Example: `/business/student_course` (not `/business/studentCourse`)
+- Only include valid Java code in the final output — no explanations or extra comments beyond JavaDoc.
+- Return the code in Markdown format using ```java syntax ``` blocks.
+
+## Incremental
+
+```json
+${incremental}
+```
+
+## Service Interface Code
+
+```java
+${serviceCode}
+```
+
+## Domain Layer Code
+
+```java
+${domainCode}
+```
+
+## Example
+
+```java
+${example}
+```

@@ -1,0 +1,34 @@
+## Task
+
+You are a professional software architect. Based on the following requirements document, identify the core business entities described in the system, and generate a simple architecture diagram that represents each entity as a module in the system using Mermaid syntax.
+
+## Method
+1. Read the requirements document carefully and extract all major business entities (e.g., Student, Teacher, Course, etc.). Don't split too much, focus on high-level entities only;
+2. For each entity, define a module named after the entity using PascalCase, and connect it to the root system node;
+3. Use Mermaid's graph TD syntax;
+4. Do not include any relationships or interactions between modules — only a flat module breakdown.
+
+## Constraints
+- Each module corresponds to a single core business entity;
+- Use PascalCase for module names (e.g., StudentModule, CourseModule);
+- Keep the structure simple and clear;
+- All modules must be connected directly to the main system node;
+- Do not include technical, functional, or cross-cutting modules like Auth, Notification, or Report;
+- Return only the Mermaid diagram in a Markdown code block with no extra explanation.
+
+## Requirements Document
+
+```markdown
+${product_requirement}
+```
+
+## Output example
+```mermaid
+graph TD
+    StudentManageSystem --> StudentModule
+    StudentManageSystem --> TeacherModule
+    StudentManageSystem --> CourseModule
+    StudentManageSystem --> EnrollmentModule
+    StudentManageSystem --> GradeModule
+
+```

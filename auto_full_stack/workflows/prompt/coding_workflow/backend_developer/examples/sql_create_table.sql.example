@@ -1,0 +1,26 @@
+-- ----------------------------
+-- User Table
+-- ----------------------------
+drop table if exists tb_user;
+create table tb_user (
+  id               bigint(20)       not null auto_increment    comment 'ID',
+  username         varchar(255)     not null                   comment 'Username',
+  email            varchar(255)     not null                   comment 'Email',
+  birthday         date             not null                   comment 'Birthday',
+  mobile           varchar(20)      not null                   comment 'Phone number',
+  gender           char(1)          default '2' not null       comment 'Gender（0-Male 1-Female 2-Unknown）',
+  status           char(1)          default '0' not null       comment 'status（0-Normal 1-Stopped）',
+  create_by        varchar(255)     default null               comment 'Creator',
+  update_by        varchar(255)     default null               comment 'Updater',
+  create_time      datetime                                    comment 'Creation time',
+  update_time      datetime                                    comment 'Update time',
+  primary key (id)
+) engine=innodb auto_increment=1 comment = 'User Table';
+
+-- ----------------------------
+-- Initialize - User table data
+-- ----------------------------
+insert into tb_user (username, email, birthday, mobile, status, gender, create_by, update_by, create_time, update_time) values ('Jerry', 'jerry@163.com', '2000-01-20', '13888888888', '0', '2', 'admin', 'admin', now(), now());
+insert into tb_user (username, email, birthday, mobile, status, gender, create_by, update_by, create_time, update_time) values ('Tom', 'tom@gmail.com', '1999-04-20', "13888888889", '0', '2', 'admin', 'admin', now(), now());
+insert into tb_user (username, email, birthday, mobile, status, gender, create_by, update_by, create_time, update_time) values ('Jack', 'jack@126.com', '1888-05-17', "13888888890", '0', '0', 'admin', 'admin', now(), now());
+insert into tb_user (username, email, birthday, mobile, status, gender, create_by, update_by, create_time, update_time) values ('Rose', 'rose@qq.com', '1892-09-24', "13888888891", '0', '1', 'admin', 'admin', now(), now());
