@@ -1,4 +1,4 @@
-# 环境变量文件
+# Environment variable file
 .env
 .env.local
 .env.development.local
@@ -44,11 +44,11 @@ yarn-error.log*
 *.tsbuildinfo
 .tscache/
 
-# 打包文件
+# Package file
 /dist/
 /build/
 
-# IDE 相关
+# IDE
 .idea/
 .vscode/
 *.swp
@@ -56,22 +56,22 @@ yarn-error.log*
 .DS_Store
 .history/
 
-# 数据库
+# Database file
 *.sqlite
 *.sqlite3
 *.db
 
-# 项目特定目录
+# Project-related documents
 .env
 workspace/
 experiments/
 experiments_new/
 paper
 
-# 日志文件
+# Log files
 logs/
 *.log
 
-# 缓存
+# Cache
 .cache/
 .parcel-cache/

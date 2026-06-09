@@ -1,5 +1,5 @@
 -- ----------------------------
--- 1、部门表
+-- 1. Department table
 -- ----------------------------
 drop table if exists sys_dept;
 create table sys_dept (
@@ -21,7 +21,7 @@ create table sys_dept (
 ) engine=innodb auto_increment=200 comment = 'Department Table';
 
 -- ----------------------------
--- 初始化-部门表数据
+-- Initialize department data
 -- ----------------------------
 insert into sys_dept values(100,  0,   '0',          'Software Development Company',   0, 'Administrator', '15888888888', 'admin@qq.com', '0', '0', 'admin', sysdate(), '', null);
 insert into sys_dept values(101,  100, '0,100',      'Shenzhen Headquarters', 1, 'Administrator', '15888888888', 'admin@qq.com', '0', '0', 'admin', sysdate(), '', null);
@@ -36,7 +36,7 @@ insert into sys_dept values(109,  102, '0,100,102',  'Finance Department',   2, 
 
 
 -- ----------------------------
--- 2、用户信息表
+-- 2. User information table
 -- ----------------------------
 drop table if exists sys_user;
 create table sys_user (
@@ -64,14 +64,14 @@ create table sys_user (
 ) engine=innodb auto_increment=100 comment = 'User Information Table';
 
 -- ----------------------------
--- 初始化-用户信息表数据
+-- Initialize user information data
 -- ----------------------------
 insert into sys_user values(1,  100, 'admin', 'Administrator', '00', 'admin@163.com', '15888888888', '1', '', '$2a$10$ReSH1hWeztbuafGftr0afuOAME0X4Cr6mvoRB0hrj1ln8dBxh0VFS', '0', '0', '127.0.0.1', sysdate(), sysdate(), 'admin', sysdate(), '', null, 'Administrator');
 insert into sys_user values(2,  105, 'tester',    'Tester', '00', 'tester@qq.com',  '15666666666', '1', '', '$2a$10$ReSH1hWeztbuafGftr0afuOAME0X4Cr6mvoRB0hrj1ln8dBxh0VFS', '0', '0', '127.0.0.1', sysdate(), sysdate(), 'admin', sysdate(), '', null, 'Tester');
 insert into sys_user values(3,  103, 'developer',    'Developer', '00', 'developer@qq.com',  '15444444444', '1', '', '$2a$10$ReSH1hWeztbuafGftr0afuOAME0X4Cr6mvoRB0hrj1ln8dBxh0VFS', '0', '0', '127.0.0.1', sysdate(), sysdate(), 'admin', sysdate(), '', null, 'Developer');
 
 -- ----------------------------
--- 3、岗位信息表
+-- 3. Post information table
 -- ----------------------------
 drop table if exists sys_post;
 create table sys_post
@@ -90,7 +90,7 @@ create table sys_post
 ) engine=innodb comment = 'Post Information Table';
 
 -- ----------------------------
--- 初始化-岗位信息表数据
+-- Initialize post information data
 -- ----------------------------
 insert into sys_post values(1, 'ceo',  'CEO',    1, '0', 'admin', sysdate(), '', null, '');
 insert into sys_post values(2, 'se',   'Project Manager',  2, '0', 'admin', sysdate(), '', null, '');
@@ -99,7 +99,7 @@ insert into sys_post values(4, 'user', 'General Employee',  4, '0', 'admin', sys
 
 
 -- ----------------------------
--- 4、角色信息表
+-- 4. Role information table
 -- ----------------------------
 drop table if exists sys_role;
 create table sys_role (
@@ -121,14 +121,14 @@ create table sys_role (
 ) engine=innodb auto_increment=100 comment = 'Role Information Table';
 
 -- ----------------------------
--- 初始化-角色信息表数据
+-- Initialize role information data
 -- ----------------------------
 insert into sys_role values('1', 'Super Administrator',  'admin',  1, 1, 1, 1, '0', '0', 'admin', sysdate(), '', null, 'Super Administrator');
 insert into sys_role values('2', 'Common Role',    'common', 2, 2, 1, 1, '0', '0', 'admin', sysdate(), '', null, 'Common Role');
 
 
 -- ----------------------------
--- 5、菜单权限表
+-- 5. Menu permission table
 -- ----------------------------
 drop table if exists sys_menu;
 create table sys_menu (
@@ -156,14 +156,14 @@ create table sys_menu (
 ) engine=innodb auto_increment=2000 comment = 'Menu Permission Table';
 
 -- ----------------------------
--- 初始化-菜单信息表数据
+-- Initialize menu information data
 -- ----------------------------
--- 一级菜单
+-- Top-level menus
 insert into sys_menu values('1', 'System', '0', '1', 'system',           null, '', '', 1, 0, 'M', '0', '0', '', 'system',   'admin', sysdate(), '', null, 'System Management Directory');
 insert into sys_menu values('2', 'Monitor', '0', '2', 'monitor',          null, '', '', 1, 0, 'M', '0', '0', '', 'monitor',  'admin', sysdate(), '', null, 'System Monitor Directory');
 insert into sys_menu values('3', 'Tools', '0', '3', 'tool',             null, '', '', 1, 0, 'M', '0', '0', '', 'tool',     'admin', sysdate(), '', null, 'System Tools Directory');
 insert into sys_menu values('4', 'Business', '0', '0', 'business',             null, '', '', 1, 0, 'M', '0', '0', '', 'business',     'admin', sysdate(), '', null, 'Business Information Directory');
--- 二级菜单
+-- Second-level menus
 insert into sys_menu values('100',  'SysUser', '1',   '1', 'user',       'system/user/index',        '', '', 1, 0, 'C', '0', '0', 'system:user:list',        'user',          'admin', sysdate(), '', null, 'SysUser management menu');
 insert into sys_menu values('101',  'Role', '1',   '2', 'role',       'system/role/index',        '', '', 1, 0, 'C', '0', '0', 'system:role:list',        'peoples',       'admin', sysdate(), '', null, 'Role management menu');
 insert into sys_menu values('102',  'Menu', '1',   '3', 'menu',       'system/menu/index',        '', '', 1, 0, 'C', '0', '0', 'system:menu:list',        'tree-table',    'admin', sysdate(), '', null, 'Menu management menu');
@@ -182,10 +182,10 @@ insert into sys_menu values('114',  'Cache List', '2',   '6', 'cacheList',  'mon
 insert into sys_menu values('115',  'Form Generator', '3',   '1', 'build',      'tool/build/index',         '', '', 1, 0, 'C', '0', '0', 'tool:build:list',         'build',         'admin', sysdate(), '', null, 'Form builder menu');
 insert into sys_menu values('116',  'Code Generator', '3',   '2', 'gen',        'tool/gen/index',           '', '', 1, 0, 'C', '0', '0', 'tool:gen:list',           'code',          'admin', sysdate(), '', null, 'Code generator menu');
 insert into sys_menu values('117',  'System API', '3',   '3', 'swagger',    'tool/swagger/index',       '', '', 1, 0, 'C', '0', '0', 'tool:swagger:list',       'swagger',       'admin', sysdate(), '', null, 'System API menu');
--- 三级菜单
+-- Third-level menus
 insert into sys_menu values('500',  'Operation Log', '108', '1', 'operlog',    'monitor/operlog/index',    '', '', 1, 0, 'C', '0', '0', 'monitor:operlog:list',    'form',          'admin', sysdate(), '', null, 'Operation log menu');
 insert into sys_menu values('501',  'Login Log', '108', '2', 'logininfor', 'monitor/logininfor/index', '', '', 1, 0, 'C', '0', '0', 'monitor:logininfor:list', 'logininfor',    'admin', sysdate(), '', null, 'Login log menu');
--- 用户管理按钮
+-- User management buttons
 insert into sys_menu values('1000', 'SysUser Query', '100', '1',  '', '', '', '', 1, 0, 'F', '0', '0', 'system:user:query',          '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1001', 'SysUser Add', '100', '2',  '', '', '', '', 1, 0, 'F', '0', '0', 'system:user:add',            '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1002', 'SysUser Edit', '100', '3',  '', '', '', '', 1, 0, 'F', '0', '0', 'system:user:edit',           '#', 'admin', sysdate(), '', null, '');
@@ -193,66 +193,66 @@ insert into sys_menu values('1003', 'SysUser Delete', '100', '4',  '', '', '', '
 insert into sys_menu values('1004', 'SysUser Export', '100', '5',  '', '', '', '', 1, 0, 'F', '0', '0', 'system:user:export',         '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1005', 'SysUser Import', '100', '6',  '', '', '', '', 1, 0, 'F', '0', '0', 'system:user:import',         '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1006', 'Reset Password', '100', '7',  '', '', '', '', 1, 0, 'F', '0', '0', 'system:user:resetPwd',       '#', 'admin', sysdate(), '', null, '');
--- 角色管理按钮
+-- Role management buttons
 insert into sys_menu values('1007', 'Role Query', '101', '1',  '', '', '', '', 1, 0, 'F', '0', '0', 'system:role:query',          '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1008', 'Role Add', '101', '2',  '', '', '', '', 1, 0, 'F', '0', '0', 'system:role:add',            '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1009', 'Role Edit', '101', '3',  '', '', '', '', 1, 0, 'F', '0', '0', 'system:role:edit',           '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1010', 'Role Delete', '101', '4',  '', '', '', '', 1, 0, 'F', '0', '0', 'system:role:remove',         '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1011', 'Role Export', '101', '5',  '', '', '', '', 1, 0, 'F', '0', '0', 'system:role:export',         '#', 'admin', sysdate(), '', null, '');
--- 菜单管理按钮
+-- Menu management buttons
 insert into sys_menu values('1012', 'Menu Query', '102', '1',  '', '', '', '', 1, 0, 'F', '0', '0', 'system:menu:query',          '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1013', 'Menu Add', '102', '2',  '', '', '', '', 1, 0, 'F', '0', '0', 'system:menu:add',            '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1014', 'Menu Edit', '102', '3',  '', '', '', '', 1, 0, 'F', '0', '0', 'system:menu:edit',           '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1015', 'Menu Delete', '102', '4',  '', '', '', '', 1, 0, 'F', '0', '0', 'system:menu:remove',         '#', 'admin', sysdate(), '', null, '');
--- 部门管理按钮
+-- Department management buttons
 insert into sys_menu values('1016', 'Department Query', '103', '1',  '', '', '', '', 1, 0, 'F', '0', '0', 'system:dept:query',          '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1017', 'Department Add', '103', '2',  '', '', '', '', 1, 0, 'F', '0', '0', 'system:dept:add',            '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1018', 'Department Edit', '103', '3',  '', '', '', '', 1, 0, 'F', '0', '0', 'system:dept:edit',           '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1019', 'Department Delete', '103', '4',  '', '', '', '', 1, 0, 'F', '0', '0', 'system:dept:remove',         '#', 'admin', sysdate(), '', null, '');
--- 岗位管理按钮
+-- Post management buttons
 insert into sys_menu values('1020', 'Post Query', '104', '1',  '', '', '', '', 1, 0, 'F', '0', '0', 'system:post:query',          '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1021', 'Post Add', '104', '2',  '', '', '', '', 1, 0, 'F', '0', '0', 'system:post:add',            '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1022', 'Post Edit', '104', '3',  '', '', '', '', 1, 0, 'F', '0', '0', 'system:post:edit',           '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1023', 'Post Delete', '104', '4',  '', '', '', '', 1, 0, 'F', '0', '0', 'system:post:remove',         '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1024', 'Post Export', '104', '5',  '', '', '', '', 1, 0, 'F', '0', '0', 'system:post:export',         '#', 'admin', sysdate(), '', null, '');
--- 字典管理按钮
+-- Dictionary management buttons
 insert into sys_menu values('1025', 'Dict Query', '105', '1', '#', '', '', '', 1, 0, 'F', '0', '0', 'system:dict:query',          '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1026', 'Dict Add', '105', '2', '#', '', '', '', 1, 0, 'F', '0', '0', 'system:dict:add',            '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1027', 'Dict Edit', '105', '3', '#', '', '', '', 1, 0, 'F', '0', '0', 'system:dict:edit',           '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1028', 'Dict Delete', '105', '4', '#', '', '', '', 1, 0, 'F', '0', '0', 'system:dict:remove',         '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1029', 'Dict Export', '105', '5', '#', '', '', '', 1, 0, 'F', '0', '0', 'system:dict:export',         '#', 'admin', sysdate(), '', null, '');
--- 参数设置按钮
+-- Parameter configuration buttons
 insert into sys_menu values('1030', 'Config Query', '106', '1', '#', '', '', '', 1, 0, 'F', '0', '0', 'system:config:query',        '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1031', 'Config Add', '106', '2', '#', '', '', '', 1, 0, 'F', '0', '0', 'system:config:add',          '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1032', 'Config Edit', '106', '3', '#', '', '', '', 1, 0, 'F', '0', '0', 'system:config:edit',         '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1033', 'Config Delete', '106', '4', '#', '', '', '', 1, 0, 'F', '0', '0', 'system:config:remove',       '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1034', 'Config Export', '106', '5', '#', '', '', '', 1, 0, 'F', '0', '0', 'system:config:export',       '#', 'admin', sysdate(), '', null, '');
--- 通知公告按钮
+-- Notice management buttons
 insert into sys_menu values('1035', 'Notice Query', '107', '1', '#', '', '', '', 1, 0, 'F', '0', '0', 'system:notice:query',        '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1036', 'Notice Add', '107', '2', '#', '', '', '', 1, 0, 'F', '0', '0', 'system:notice:add',          '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1037', 'Notice Edit', '107', '3', '#', '', '', '', 1, 0, 'F', '0', '0', 'system:notice:edit',         '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1038', 'Notice Delete', '107', '4', '#', '', '', '', 1, 0, 'F', '0', '0', 'system:notice:remove',       '#', 'admin', sysdate(), '', null, '');
--- 操作日志按钮
+-- Operation log buttons
 insert into sys_menu values('1039', 'Operation Query', '500', '1', '#', '', '', '', 1, 0, 'F', '0', '0', 'monitor:operlog:query',      '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1040', 'Operation Delete', '500', '2', '#', '', '', '', 1, 0, 'F', '0', '0', 'monitor:operlog:remove',     '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1041', 'Log Export', '500', '3', '#', '', '', '', 1, 0, 'F', '0', '0', 'monitor:operlog:export',     '#', 'admin', sysdate(), '', null, '');
--- 登录日志按钮
+-- Login log buttons
 insert into sys_menu values('1042', 'Login Query', '501', '1', '#', '', '', '', 1, 0, 'F', '0', '0', 'monitor:logininfor:query',   '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1043', 'Login Delete', '501', '2', '#', '', '', '', 1, 0, 'F', '0', '0', 'monitor:logininfor:remove',  '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1044', 'Log Export', '501', '3', '#', '', '', '', 1, 0, 'F', '0', '0', 'monitor:logininfor:export',  '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1045', 'Account Unlock', '501', '4', '#', '', '', '', 1, 0, 'F', '0', '0', 'monitor:logininfor:unlock',  '#', 'admin', sysdate(), '', null, '');
--- 在线用户按钮
+-- Online user buttons
 insert into sys_menu values('1046', 'Online Query', '109', '1', '#', '', '', '', 1, 0, 'F', '0', '0', 'monitor:online:query',       '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1047', 'Batch Force Logout', '109', '2', '#', '', '', '', 1, 0, 'F', '0', '0', 'monitor:online:batchLogout', '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1048', 'Single Force Logout', '109', '3', '#', '', '', '', 1, 0, 'F', '0', '0', 'monitor:online:forceLogout', '#', 'admin', sysdate(), '', null, '');
--- 定时任务按钮
+-- Scheduled task buttons
 insert into sys_menu values('1049', 'Job Query', '110', '1', '#', '', '', '', 1, 0, 'F', '0', '0', 'monitor:job:query',          '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1050', 'Job Add', '110', '2', '#', '', '', '', 1, 0, 'F', '0', '0', 'monitor:job:add',            '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1051', 'Job Edit', '110', '3', '#', '', '', '', 1, 0, 'F', '0', '0', 'monitor:job:edit',           '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1052', 'Job Delete', '110', '4', '#', '', '', '', 1, 0, 'F', '0', '0', 'monitor:job:remove',         '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1053', 'Status Change', '110', '5', '#', '', '', '', 1, 0, 'F', '0', '0', 'monitor:job:changeStatus',   '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1054', 'Task Export', '110', '6', '#', '', '', '', 1, 0, 'F', '0', '0', 'monitor:job:export',         '#', 'admin', sysdate(), '', null, '');
--- 代码生成按钮
+-- Code generation buttons
 insert into sys_menu values('1055', 'Generate Query', '116', '1', '#', '', '', '', 1, 0, 'F', '0', '0', 'tool:gen:query',             '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1056', 'Generate Edit', '116', '2', '#', '', '', '', 1, 0, 'F', '0', '0', 'tool:gen:edit',              '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1057', 'Generate Delete', '116', '3', '#', '', '', '', 1, 0, 'F', '0', '0', 'tool:gen:remove',            '#', 'admin', sysdate(), '', null, '');
@@ -262,7 +262,7 @@ insert into sys_menu values('1060', 'Generate Code', '116', '6', '#', '', '', ''
 
 
 -- ----------------------------
--- 6、用户和角色关联表  用户N-1角色
+-- 6. User-role association table: N-to-1 relationship
 -- ----------------------------
 drop table if exists sys_user_role;
 create table sys_user_role (
@@ -272,14 +272,14 @@ create table sys_user_role (
 ) engine=innodb comment = 'User and Role Association Table';
 
 -- ----------------------------
--- 初始化-用户和角色关联表数据
+-- Initialize user-role association data
 -- ----------------------------
 insert into sys_user_role values ('1', '1');
 insert into sys_user_role values ('2', '2');
 
 
 -- ----------------------------
--- 7、角色和菜单关联表  角色1-N菜单
+-- 7. Role-menu association table: 1-to-N relationship
 -- ----------------------------
 drop table if exists sys_role_menu;
 create table sys_role_menu (
@@ -289,7 +289,7 @@ create table sys_role_menu (
 ) engine=innodb comment = 'Role and Menu Association Table';
 
 -- ----------------------------
--- 初始化-角色和菜单关联表数据
+-- Initialize role-menu association data
 -- ----------------------------
 insert into sys_role_menu values ('2', '1');
 insert into sys_role_menu values ('2', '2');
@@ -378,7 +378,7 @@ insert into sys_role_menu values ('2', '1059');
 insert into sys_role_menu values ('2', '1060');
 
 -- ----------------------------
--- 8、角色和部门关联表  角色1-N部门
+-- 8. Role-department association table: 1-to-N relationship
 -- ----------------------------
 drop table if exists sys_role_dept;
 create table sys_role_dept (
@@ -388,7 +388,7 @@ create table sys_role_dept (
 ) engine=innodb comment = 'Role and Department Association Table';
 
 -- ----------------------------
--- 初始化-角色和部门关联表数据
+-- Initialize role-department association data
 -- ----------------------------
 insert into sys_role_dept values ('2', '100');
 insert into sys_role_dept values ('2', '101');
@@ -396,7 +396,7 @@ insert into sys_role_dept values ('2', '105');
 
 
 -- ----------------------------
--- 9、用户与岗位关联表  用户1-N岗位
+-- 9. User-post association table: 1-to-N relationship
 -- ----------------------------
 drop table if exists sys_user_post;
 create table sys_user_post
@@ -407,14 +407,14 @@ create table sys_user_post
 ) engine=innodb comment = 'User and Post Association Table';
 
 -- ----------------------------
--- 初始化-用户与岗位关联表数据
+-- Initialize user-post association data
 -- ----------------------------
 insert into sys_user_post values ('1', '1');
 insert into sys_user_post values ('2', '2');
 
 
 -- ----------------------------
--- 10、操作日志记录
+-- 10. Operation log records
 -- ----------------------------
 drop table if exists sys_oper_log;
 create table sys_oper_log (
@@ -443,7 +443,7 @@ create table sys_oper_log (
 
 
 -- ----------------------------
--- 11、字典类型表
+-- 11. Dictionary type table
 -- ----------------------------
 drop table if exists sys_dict_type;
 create table sys_dict_type
@@ -474,7 +474,7 @@ insert into sys_dict_type values(10, 'System Status', 'sys_common_status',   '0'
 
 
 -- ----------------------------
--- 12、字典数据表
+-- 12. Dictionary data table
 -- ----------------------------
 drop table if exists sys_dict_data;
 create table sys_dict_data
@@ -528,7 +528,7 @@ insert into sys_dict_data values(29, 2,  'Failed',     '1',       'sys_common_st
 
 
 -- ----------------------------
--- 13、参数配置表
+-- 13. Parameter configuration table
 -- ----------------------------
 drop table if exists sys_config;
 create table sys_config (
@@ -556,7 +556,7 @@ insert into sys_config values(8, 'User Management-Account Password Update Cycle'
 
 
 -- ----------------------------
--- 14、系统访问记录
+-- 14. System access records
 -- ----------------------------
 drop table if exists sys_logininfor;
 create table sys_logininfor (
@@ -576,7 +576,7 @@ create table sys_logininfor (
 
 
 -- ----------------------------
--- 15、定时任务调度表
+-- 15. Scheduled task table
 -- ----------------------------
 drop table if exists sys_job;
 create table sys_job (
@@ -602,7 +602,7 @@ insert into sys_job values(3, 'System Default (Multiple Parameters)', 'DEFAULT',
 
 
 -- ----------------------------
--- 16、定时任务调度日志表
+-- 16. Scheduled task log table
 -- ----------------------------
 drop table if exists sys_job_log;
 create table sys_job_log (
@@ -619,7 +619,7 @@ create table sys_job_log (
 
 
 -- ----------------------------
--- 17、通知公告表
+-- 17. Notice table
 -- ----------------------------
 drop table if exists sys_notice;
 create table sys_notice (
@@ -637,14 +637,14 @@ create table sys_notice (
 ) engine=innodb auto_increment=10 comment = 'Notice Announcement Table';
 
 -- ----------------------------
--- 初始化-公告信息表数据
+-- Initialize notice information data
 -- ----------------------------
 insert into sys_notice values('1', 'Warm Reminder: 2018-07-01 New Version Released', '2', 'New Version Content', '0', 'admin', sysdate(), '', null, 'Administrator');
 insert into sys_notice values('2', 'Maintenance Notice: 2018-07-01 System Maintenance at Dawn', '1', 'Maintenance Content',   '0', 'admin', sysdate(), '', null, 'Administrator');
 
 
 -- ----------------------------
--- 18、代码生成业务表
+-- 18. Code generation business table
 -- ----------------------------
 drop table if exists gen_table;
 create table gen_table (
@@ -674,7 +674,7 @@ create table gen_table (
 
 
 -- ----------------------------
--- 19、代码生成业务表字段
+-- 19. Code generation business table columns
 -- ----------------------------
 drop table if exists gen_table_column;
 create table gen_table_column (

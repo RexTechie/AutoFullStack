@@ -126,6 +126,6 @@ operations_graph.add_edge("deploy_frontend", END)
 operations_graph.add_edge("deploy_backend", END)
 
 operations_workflow = operations_graph.compile()
-#
-# # 打印工作流的状态图
+
+# Print the state diagram of the workflows
 logger.debug(f"Operations Workflow: \n{operations_workflow.get_graph().draw_ascii()}")

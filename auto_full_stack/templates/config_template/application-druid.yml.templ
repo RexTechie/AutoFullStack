@@ -1,40 +1,40 @@
-# 数据源配置
+# Data source configuration
 spring:
     datasource:
         type: com.alibaba.druid.pool.DruidDataSource
         driverClassName: com.mysql.cj.jdbc.Driver
         druid:
-            # 主库数据源
+            # Primary data source
             master:
                 url: jdbc:mysql://localhost:3306/${database}?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
                 username: root
                 password: root
-            # 从库数据源
+            # Replica data source
             slave:
-                # 从数据源开关/默认关闭
+                # Replica data source switch, disabled by default
                 enabled: false
                 url:
                 username:
                 password:
-            # 初始连接数
+            # Initial number of connections
             initialSize: 5
-            # 最小连接池数量
+            # Minimum number of idle connections
             minIdle: 10
-            # 最大连接池数量
+            # Maximum number of active connections
             maxActive: 20
-            # 配置获取连接等待超时的时间
+            # Maximum wait time for obtaining a connection
             maxWait: 60000
-            # 配置连接超时时间
+            # Connection timeout
             connectTimeout: 30000
-            # 配置网络超时时间
+            # Socket timeout
             socketTimeout: 60000
-            # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+            # Interval between idle connection eviction checks, in milliseconds
             timeBetweenEvictionRunsMillis: 60000
-            # 配置一个连接在池中最小生存的时间，单位是毫秒
+            # Minimum time a connection may remain idle in the pool, in milliseconds
             minEvictableIdleTimeMillis: 300000
-            # 配置一个连接在池中最大生存的时间，单位是毫秒
+            # Maximum time a connection may remain idle in the pool, in milliseconds
             maxEvictableIdleTimeMillis: 900000
-            # 配置检测连接是否有效
+            # Query used to validate connections
             validationQuery: SELECT 1 FROM DUAL
             testWhileIdle: true
             testOnBorrow: false
@@ -43,16 +43,16 @@ spring:
                 enabled: true
             statViewServlet:
                 enabled: true
-                # 设置白名单，不填则允许所有访问
+                # Access allowlist; leave empty to allow all clients
                 allow:
                 url-pattern: /druid/*
-                # 控制台管理用户名和密码
+                # Management console username and password
                 login-username: root
                 login-password: root
             filter:
                 stat:
                     enabled: true
-                    # 慢SQL记录
+                    # Log slow SQL statements
                     log-slow-sql: true
                     slow-sql-millis: 1000
                     merge-sql: true

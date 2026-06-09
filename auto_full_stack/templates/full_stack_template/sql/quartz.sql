@@ -11,164 +11,164 @@ DROP TABLE IF EXISTS QRTZ_JOB_DETAILS;
 DROP TABLE IF EXISTS QRTZ_CALENDARS;
 
 -- ----------------------------
--- 1、存储每一个已配置的 jobDetail 的详细信息
+-- 1. Stores details for each configured JobDetail
 -- ----------------------------
 create table QRTZ_JOB_DETAILS (
-    sched_name           varchar(120)    not null            comment '调度名称',
-    job_name             varchar(200)    not null            comment '任务名称',
-    job_group            varchar(200)    not null            comment '任务组名',
-    description          varchar(250)    null                comment '相关介绍',
-    job_class_name       varchar(250)    not null            comment '执行任务类名称',
-    is_durable           varchar(1)      not null            comment '是否持久化',
-    is_nonconcurrent     varchar(1)      not null            comment '是否并发',
-    is_update_data       varchar(1)      not null            comment '是否更新数据',
-    requests_recovery    varchar(1)      not null            comment '是否接受恢复执行',
-    job_data             blob            null                comment '存放持久化job对象',
+    sched_name           varchar(120)    not null            comment 'Scheduler name',
+    job_name             varchar(200)    not null            comment 'Job name',
+    job_group            varchar(200)    not null            comment 'Job group name',
+    description          varchar(250)    null                comment 'Description',
+    job_class_name       varchar(250)    not null            comment 'Job implementation class name',
+    is_durable           varchar(1)      not null            comment 'Whether the job is durable',
+    is_nonconcurrent     varchar(1)      not null            comment 'Whether concurrent execution is disallowed',
+    is_update_data       varchar(1)      not null            comment 'Whether job data should be updated after execution',
+    requests_recovery    varchar(1)      not null            comment 'Whether recovery execution is requested',
+    job_data             blob            null                comment 'Serialized persistent JobDataMap',
     primary key (sched_name, job_name, job_group)
-) engine=innodb comment = '任务详细信息表';
+) engine=innodb comment = 'Job detail table';
 
 -- ----------------------------
--- 2、 存储已配置的 Trigger 的信息
+-- 2. Stores configured trigger information
 -- ----------------------------
 create table QRTZ_TRIGGERS (
-    sched_name           varchar(120)    not null            comment '调度名称',
-    trigger_name         varchar(200)    not null            comment '触发器的名字',
-    trigger_group        varchar(200)    not null            comment '触发器所属组的名字',
-    job_name             varchar(200)    not null            comment 'qrtz_job_details表job_name的外键',
-    job_group            varchar(200)    not null            comment 'qrtz_job_details表job_group的外键',
-    description          varchar(250)    null                comment '相关介绍',
-    next_fire_time       bigint(13)      null                comment '上一次触发时间（毫秒）',
-    prev_fire_time       bigint(13)      null                comment '下一次触发时间（默认为-1表示不触发）',
-    priority             integer         null                comment '优先级',
-    trigger_state        varchar(16)     not null            comment '触发器状态',
-    trigger_type         varchar(8)      not null            comment '触发器的类型',
-    start_time           bigint(13)      not null            comment '开始时间',
-    end_time             bigint(13)      null                comment '结束时间',
-    calendar_name        varchar(200)    null                comment '日程表名称',
-    misfire_instr        smallint(2)     null                comment '补偿执行的策略',
-    job_data             blob            null                comment '存放持久化job对象',
+    sched_name           varchar(120)    not null            comment 'Scheduler name',
+    trigger_name         varchar(200)    not null            comment 'Trigger name',
+    trigger_group        varchar(200)    not null            comment 'Trigger group name',
+    job_name             varchar(200)    not null            comment 'Foreign key to qrtz_job_details.job_name',
+    job_group            varchar(200)    not null            comment 'Foreign key to qrtz_job_details.job_group',
+    description          varchar(250)    null                comment 'Description',
+    next_fire_time       bigint(13)      null                comment 'Next fire time in milliseconds',
+    prev_fire_time       bigint(13)      null                comment 'Previous fire time in milliseconds',
+    priority             integer         null                comment 'Priority',
+    trigger_state        varchar(16)     not null            comment 'Trigger state',
+    trigger_type         varchar(8)      not null            comment 'Trigger type',
+    start_time           bigint(13)      not null            comment 'Start time',
+    end_time             bigint(13)      null                comment 'End time',
+    calendar_name        varchar(200)    null                comment 'Calendar name',
+    misfire_instr        smallint(2)     null                comment 'Misfire handling instruction',
+    job_data             blob            null                comment 'Serialized persistent JobDataMap',
     primary key (sched_name, trigger_name, trigger_group),
     foreign key (sched_name, job_name, job_group) references QRTZ_JOB_DETAILS(sched_name, job_name, job_group)
-) engine=innodb comment = '触发器详细信息表';
+) engine=innodb comment = 'Trigger detail table';
 
 -- ----------------------------
--- 3、 存储简单的 Trigger，包括重复次数，间隔，以及已触发的次数
+-- 3. Stores simple triggers, including repeat count, interval, and times triggered
 -- ----------------------------
 create table QRTZ_SIMPLE_TRIGGERS (
-    sched_name           varchar(120)    not null            comment '调度名称',
-    trigger_name         varchar(200)    not null            comment 'qrtz_triggers表trigger_name的外键',
-    trigger_group        varchar(200)    not null            comment 'qrtz_triggers表trigger_group的外键',
-    repeat_count         bigint(7)       not null            comment '重复的次数统计',
-    repeat_interval      bigint(12)      not null            comment '重复的间隔时间',
-    times_triggered      bigint(10)      not null            comment '已经触发的次数',
+    sched_name           varchar(120)    not null            comment 'Scheduler name',
+    trigger_name         varchar(200)    not null            comment 'Foreign key to qrtz_triggers.trigger_name',
+    trigger_group        varchar(200)    not null            comment 'Foreign key to qrtz_triggers.trigger_group',
+    repeat_count         bigint(7)       not null            comment 'Repeat count',
+    repeat_interval      bigint(12)      not null            comment 'Repeat interval',
+    times_triggered      bigint(10)      not null            comment 'Number of times triggered',
     primary key (sched_name, trigger_name, trigger_group),
     foreign key (sched_name, trigger_name, trigger_group) references QRTZ_TRIGGERS(sched_name, trigger_name, trigger_group)
-) engine=innodb comment = '简单触发器的信息表';
+) engine=innodb comment = 'Simple trigger table';
 
 -- ----------------------------
--- 4、 存储 Cron Trigger，包括 Cron 表达式和时区信息
+-- 4. Stores Cron triggers, including Cron expressions and time zones
 -- ---------------------------- 
 create table QRTZ_CRON_TRIGGERS (
-    sched_name           varchar(120)    not null            comment '调度名称',
-    trigger_name         varchar(200)    not null            comment 'qrtz_triggers表trigger_name的外键',
-    trigger_group        varchar(200)    not null            comment 'qrtz_triggers表trigger_group的外键',
-    cron_expression      varchar(200)    not null            comment 'cron表达式',
-    time_zone_id         varchar(80)                         comment '时区',
+    sched_name           varchar(120)    not null            comment 'Scheduler name',
+    trigger_name         varchar(200)    not null            comment 'Foreign key to qrtz_triggers.trigger_name',
+    trigger_group        varchar(200)    not null            comment 'Foreign key to qrtz_triggers.trigger_group',
+    cron_expression      varchar(200)    not null            comment 'Cron expression',
+    time_zone_id         varchar(80)                         comment 'Time zone',
     primary key (sched_name, trigger_name, trigger_group),
     foreign key (sched_name, trigger_name, trigger_group) references QRTZ_TRIGGERS(sched_name, trigger_name, trigger_group)
-) engine=innodb comment = 'Cron类型的触发器表';
+) engine=innodb comment = 'Cron trigger table';
 
 -- ----------------------------
--- 5、 Trigger 作为 Blob 类型存储(用于 Quartz 用户用 JDBC 创建他们自己定制的 Trigger 类型，JobStore 并不知道如何存储实例的时候)
+-- 5. Stores custom Trigger implementations as BLOBs when JobStore cannot persist them directly
 -- ---------------------------- 
 create table QRTZ_BLOB_TRIGGERS (
-    sched_name           varchar(120)    not null            comment '调度名称',
-    trigger_name         varchar(200)    not null            comment 'qrtz_triggers表trigger_name的外键',
-    trigger_group        varchar(200)    not null            comment 'qrtz_triggers表trigger_group的外键',
-    blob_data            blob            null                comment '存放持久化Trigger对象',
+    sched_name           varchar(120)    not null            comment 'Scheduler name',
+    trigger_name         varchar(200)    not null            comment 'Foreign key to qrtz_triggers.trigger_name',
+    trigger_group        varchar(200)    not null            comment 'Foreign key to qrtz_triggers.trigger_group',
+    blob_data            blob            null                comment 'Serialized persistent Trigger object',
     primary key (sched_name, trigger_name, trigger_group),
     foreign key (sched_name, trigger_name, trigger_group) references QRTZ_TRIGGERS(sched_name, trigger_name, trigger_group)
-) engine=innodb comment = 'Blob类型的触发器表';
+) engine=innodb comment = 'BLOB trigger table';
 
 -- ----------------------------
--- 6、 以 Blob 类型存储存放日历信息， quartz可配置一个日历来指定一个时间范围
+-- 6. Stores calendar information as BLOBs for defining scheduling time ranges
 -- ---------------------------- 
 create table QRTZ_CALENDARS (
-    sched_name           varchar(120)    not null            comment '调度名称',
-    calendar_name        varchar(200)    not null            comment '日历名称',
-    calendar             blob            not null            comment '存放持久化calendar对象',
+    sched_name           varchar(120)    not null            comment 'Scheduler name',
+    calendar_name        varchar(200)    not null            comment 'Calendar name',
+    calendar             blob            not null            comment 'Serialized persistent Calendar object',
     primary key (sched_name, calendar_name)
-) engine=innodb comment = '日历信息表';
+) engine=innodb comment = 'Calendar information table';
 
 -- ----------------------------
--- 7、 存储已暂停的 Trigger 组的信息
+-- 7. Stores paused trigger group information
 -- ---------------------------- 
 create table QRTZ_PAUSED_TRIGGER_GRPS (
-    sched_name           varchar(120)    not null            comment '调度名称',
-    trigger_group        varchar(200)    not null            comment 'qrtz_triggers表trigger_group的外键',
+    sched_name           varchar(120)    not null            comment 'Scheduler name',
+    trigger_group        varchar(200)    not null            comment 'Foreign key to qrtz_triggers.trigger_group',
     primary key (sched_name, trigger_group)
-) engine=innodb comment = '暂停的触发器表';
+) engine=innodb comment = 'Paused trigger group table';
 
 -- ----------------------------
--- 8、 存储与已触发的 Trigger 相关的状态信息，以及相联 Job 的执行信息
+-- 8. Stores fired trigger state and associated job execution information
 -- ---------------------------- 
 create table QRTZ_FIRED_TRIGGERS (
-    sched_name           varchar(120)    not null            comment '调度名称',
-    entry_id             varchar(95)     not null            comment '调度器实例id',
-    trigger_name         varchar(200)    not null            comment 'qrtz_triggers表trigger_name的外键',
-    trigger_group        varchar(200)    not null            comment 'qrtz_triggers表trigger_group的外键',
-    instance_name        varchar(200)    not null            comment '调度器实例名',
-    fired_time           bigint(13)      not null            comment '触发的时间',
-    sched_time           bigint(13)      not null            comment '定时器制定的时间',
-    priority             integer         not null            comment '优先级',
-    state                varchar(16)     not null            comment '状态',
-    job_name             varchar(200)    null                comment '任务名称',
-    job_group            varchar(200)    null                comment '任务组名',
-    is_nonconcurrent     varchar(1)      null                comment '是否并发',
-    requests_recovery    varchar(1)      null                comment '是否接受恢复执行',
+    sched_name           varchar(120)    not null            comment 'Scheduler name',
+    entry_id             varchar(95)     not null            comment 'Scheduler instance entry ID',
+    trigger_name         varchar(200)    not null            comment 'Foreign key to qrtz_triggers.trigger_name',
+    trigger_group        varchar(200)    not null            comment 'Foreign key to qrtz_triggers.trigger_group',
+    instance_name        varchar(200)    not null            comment 'Scheduler instance name',
+    fired_time           bigint(13)      not null            comment 'Actual fire time',
+    sched_time           bigint(13)      not null            comment 'Scheduled fire time',
+    priority             integer         not null            comment 'Priority',
+    state                varchar(16)     not null            comment 'State',
+    job_name             varchar(200)    null                comment 'Job name',
+    job_group            varchar(200)    null                comment 'Job group name',
+    is_nonconcurrent     varchar(1)      null                comment 'Whether concurrent execution is disallowed',
+    requests_recovery    varchar(1)      null                comment 'Whether recovery execution is requested',
     primary key (sched_name, entry_id)
-) engine=innodb comment = '已触发的触发器表';
+) engine=innodb comment = 'Fired trigger table';
 
 -- ----------------------------
--- 9、 存储少量的有关 Scheduler 的状态信息，假如是用于集群中，可以看到其他的 Scheduler 实例
+-- 9. Stores scheduler state information used to track instances in a cluster
 -- ---------------------------- 
 create table QRTZ_SCHEDULER_STATE (
-    sched_name           varchar(120)    not null            comment '调度名称',
-    instance_name        varchar(200)    not null            comment '实例名称',
-    last_checkin_time    bigint(13)      not null            comment '上次检查时间',
-    checkin_interval     bigint(13)      not null            comment '检查间隔时间',
+    sched_name           varchar(120)    not null            comment 'Scheduler name',
+    instance_name        varchar(200)    not null            comment 'Instance name',
+    last_checkin_time    bigint(13)      not null            comment 'Last check-in time',
+    checkin_interval     bigint(13)      not null            comment 'Check-in interval',
     primary key (sched_name, instance_name)
-) engine=innodb comment = '调度器状态表';
+) engine=innodb comment = 'Scheduler state table';
 
 -- ----------------------------
--- 10、 存储程序的悲观锁的信息(假如使用了悲观锁)
+-- 10. Stores pessimistic lock information when locking is enabled
 -- ---------------------------- 
 create table QRTZ_LOCKS (
-    sched_name           varchar(120)    not null            comment '调度名称',
-    lock_name            varchar(40)     not null            comment '悲观锁名称',
+    sched_name           varchar(120)    not null            comment 'Scheduler name',
+    lock_name            varchar(40)     not null            comment 'Lock name',
     primary key (sched_name, lock_name)
-) engine=innodb comment = '存储的悲观锁信息表';
+) engine=innodb comment = 'Scheduler lock table';
 
 -- ----------------------------
--- 11、 Quartz集群实现同步机制的行锁表
+-- 11. Stores extended trigger properties used by Quartz
 -- ---------------------------- 
 create table QRTZ_SIMPROP_TRIGGERS (
-    sched_name           varchar(120)    not null            comment '调度名称',
-    trigger_name         varchar(200)    not null            comment 'qrtz_triggers表trigger_name的外键',
-    trigger_group        varchar(200)    not null            comment 'qrtz_triggers表trigger_group的外键',
-    str_prop_1           varchar(512)    null                comment 'String类型的trigger的第一个参数',
-    str_prop_2           varchar(512)    null                comment 'String类型的trigger的第二个参数',
-    str_prop_3           varchar(512)    null                comment 'String类型的trigger的第三个参数',
-    int_prop_1           int             null                comment 'int类型的trigger的第一个参数',
-    int_prop_2           int             null                comment 'int类型的trigger的第二个参数',
-    long_prop_1          bigint          null                comment 'long类型的trigger的第一个参数',
-    long_prop_2          bigint          null                comment 'long类型的trigger的第二个参数',
-    dec_prop_1           numeric(13,4)   null                comment 'decimal类型的trigger的第一个参数',
-    dec_prop_2           numeric(13,4)   null                comment 'decimal类型的trigger的第二个参数',
-    bool_prop_1          varchar(1)      null                comment 'Boolean类型的trigger的第一个参数',
-    bool_prop_2          varchar(1)      null                comment 'Boolean类型的trigger的第二个参数',
+    sched_name           varchar(120)    not null            comment 'Scheduler name',
+    trigger_name         varchar(200)    not null            comment 'Foreign key to qrtz_triggers.trigger_name',
+    trigger_group        varchar(200)    not null            comment 'Foreign key to qrtz_triggers.trigger_group',
+    str_prop_1           varchar(512)    null                comment 'First string trigger property',
+    str_prop_2           varchar(512)    null                comment 'Second string trigger property',
+    str_prop_3           varchar(512)    null                comment 'Third string trigger property',
+    int_prop_1           int             null                comment 'First integer trigger property',
+    int_prop_2           int             null                comment 'Second integer trigger property',
+    long_prop_1          bigint          null                comment 'First long trigger property',
+    long_prop_2          bigint          null                comment 'Second long trigger property',
+    dec_prop_1           numeric(13,4)   null                comment 'First decimal trigger property',
+    dec_prop_2           numeric(13,4)   null                comment 'Second decimal trigger property',
+    bool_prop_1          varchar(1)      null                comment 'First Boolean trigger property',
+    bool_prop_2          varchar(1)      null                comment 'Second Boolean trigger property',
     primary key (sched_name, trigger_name, trigger_group),
     foreign key (sched_name, trigger_name, trigger_group) references QRTZ_TRIGGERS(sched_name, trigger_name, trigger_group)
-) engine=innodb comment = '同步机制的行锁表';
+) engine=innodb comment = 'Simple property trigger table';
 
 commit;

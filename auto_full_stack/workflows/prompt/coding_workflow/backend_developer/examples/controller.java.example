@@ -59,7 +59,7 @@ public class UserController extends BaseController
     {
         List<User> list = userService.selectUserList(user);
         ExcelUtil<User> util = new ExcelUtil<User>(User.class);
-        util.exportExcel(response, list, "User数据");
+        util.exportExcel(response, list, "User Data");
     }
 
     /**

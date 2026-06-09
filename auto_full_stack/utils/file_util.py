@@ -39,14 +39,14 @@ class FileUtil:
     @staticmethod
     def append_file(file_path, content):
         """
-        追加内容到文件,如果文件不存在则创建文件
-        :param file_path: 文件路径
-        :param content: 文件内容
+        Append content to the file, or create the file if it does not exist.
+        :param file_path: File path
+        :param content: File content
         :return:
         """
-        # 获取文件路径中的目录部分
+        # Get the directory portion of the file path
         directory = os.path.dirname(file_path)
-        # 如果目录不存在，则创建它
+        # Create the directory if it does not exist
         if not os.path.exists(directory):
             os.makedirs(directory)
         with open(file_path, 'a+', encoding='utf-8') as file:

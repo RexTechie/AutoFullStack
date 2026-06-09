@@ -48,7 +48,7 @@ class NameRuleConverter:
         return s[0].lower() + s[1:]
 
 
-# 示例用法
+# Example
 if __name__ == "__main__":
     example_str = "ExampleString"
     print(NameRuleConverter.to_snake_case(example_str))  # Output: example_string

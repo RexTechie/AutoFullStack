@@ -1,119 +1,119 @@
-# 项目相关配置
+# Application configuration
 app:
-  # 名称
+  # Application name
   name: ${name}
-  # 版本
+  # Version
   version: 1.0.0
-  # 版权年份
+  # Copyright year
   copyrightYear: 2025
-  # 文件路径 示例（ Windows配置D:/app/uploadPath，Linux配置 /home/app/uploadPath）
+  # File path, for example D:/app/uploadPath on Windows or /home/app/uploadPath on Linux
   profile: ${profile}
-  # 获取ip地址开关
+  # Enable IP address lookup
   addressEnabled: false
-  # 验证码类型 math 数字计算 char 字符验证
+  # CAPTCHA type: math for arithmetic or char for character validation
   captchaType: math
 
-# 开发环境配置
+# Server configuration
 server:
-  # 服务器的HTTP端口，默认为8080
+  # HTTP server port, defaults to 8080
   port: 8080
   servlet:
-    # 应用的访问路径
+    # Application context path
     context-path: /
   tomcat:
-    # tomcat的URI编码
+    # Tomcat URI encoding
     uri-encoding: UTF-8
-    # 连接数满后的排队数，默认为100
+    # Maximum request queue length when all connections are in use, defaults to 100
     accept-count: 1000
     threads:
-      # tomcat最大线程数，默认为200
+      # Maximum number of Tomcat worker threads, defaults to 200
       max: 800
-      # Tomcat启动初始化的线程数，默认值10
+      # Number of Tomcat worker threads initialized at startup, defaults to 10
       min-spare: 100
 
-# 日志配置
+# Logging configuration
 logging:
   level:
     com.demo: debug
     org.springframework: warn
 
-# 用户配置
+# User configuration
 user:
   password:
-    # 密码最大错误次数
+    # Maximum number of failed password attempts
     maxRetryCount: 5
-    # 密码锁定时间（默认10分钟）
+    # Password lock duration in minutes, defaults to 10
     lockTime: 10
 
-# Spring配置
+# Spring configuration
 spring:
-  # 资源信息
+  # Message resources
   messages:
-    # 国际化资源文件路径
+    # Internationalization resource bundle path
     basename: i18n/messages
   profiles:
     active: druid
-  # 文件上传
+  # File upload
   servlet:
     multipart:
-      # 单个文件大小
+      # Maximum size of a single file
       max-file-size: 10MB
-      # 设置总上传的文件大小
+      # Maximum total upload size
       max-request-size: 20MB
-  # 服务模块
+  # Development tools
   devtools:
     restart:
-      # 热部署开关
+      # Enable automatic restart
       enabled: true
   data:
-    # redis 配置
+    # Redis configuration
     redis:
-      # 地址
+      # Host
       host: localhost
-      # 端口，默认为6379
+      # Port, defaults to 6379
       port: 6379
-      # 数据库索引
+      # Database index
       database: 0
-      # 密码
+      # Password
       password:
-      # 连接超时时间
+      # Connection timeout
       timeout: 10s
       lettuce:
         pool:
-          # 连接池中的最小空闲连接
+          # Minimum number of idle connections
           min-idle: 0
-          # 连接池中的最大空闲连接
+          # Maximum number of idle connections
           max-idle: 8
-          # 连接池的最大数据库连接数
+          # Maximum number of active connections
           max-active: 8
-          # #连接池最大阻塞等待时间（使用负值表示没有限制）
+          # Maximum blocking wait time; use a negative value for no limit
           max-wait: -1ms
 
-# token配置
+# Token configuration
 token:
-  # 令牌自定义标识
+  # Custom token header
   header: Authorization
-  # 令牌密钥
+  # Token secret
   secret: abcdefghijklmnopqrstuvwxyz
-  # 令牌有效期（默认60分钟）
+  # Token validity period in minutes, defaults to 60
   expireTime: 60
 
-# MyBatis配置
+# MyBatis configuration
 mybatis-plus:
-  # 搜索指定包别名
+  # Package pattern for type aliases
   typeAliasesPackage: com.demo.**.domain
-  # 配置mapper的扫描，找到所有的mapper.xml映射文件
+  # Locations of Mapper XML files
   mapperLocations: classpath*:mapper/**/*Mapper.xml
-  # 加载全局的配置文件
+  # Global MyBatis configuration file
   configLocation: classpath:mybatis/mybatis-config.xml
 
-# PageHelper分页插件
+# PageHelper pagination plugin
 pagehelper:
   helperDialect: mysql
   supportMethodsArguments: true
   params: count=countSql
 
-# Springdoc配置
+# Springdoc configuration
 springdoc:
   api-docs:
     path: /v3/api-docs
@@ -127,11 +127,11 @@ springdoc:
       paths-to-match: '/**'
       packages-to-scan: com.demo.business.controller
 
-# 防止XSS攻击
+# XSS protection
 xss:
-  # 过滤开关
+  # Enable filtering
   enabled: true
-  # 排除链接（多个用逗号分隔）
+  # Excluded paths, separated by commas
   excludes: /system/notice
-  # 匹配链接
+  # Paths to filter
   urlPatterns: /system/*,/monitor/*,/tool/*

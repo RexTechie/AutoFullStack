@@ -32,7 +32,7 @@ FRONTEND_SETTING_TOP_NAV = ['True', False]
 frontend_developer = FrontendDeveloper()
 backend_developer = BackendDeveloper()
 
-# 节点定义
+# Define Node
 class IncrementNode:
     def __init__(self, data):
         self.id = data["id"]
