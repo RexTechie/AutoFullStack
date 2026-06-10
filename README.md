@@ -280,4 +280,7 @@ The benchmark tasks mainly cover management-style full-stack applications based 
 
 ## Acknowledgement
 
-The project scaffold used by AutoFullStack is adapted from RuoYi-Vue, which is released under the MIT License. The original copyright and license notice are retained in accordance with the MIT License.
+The project scaffold used by AutoFullStack is adapted from
+[RuoYi-Vue](https://gitee.com/y_project/RuoYi-Vue), which is distributed under
+the MIT License. Its source, modification scope, copyright notice, and license
+text are documented in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
