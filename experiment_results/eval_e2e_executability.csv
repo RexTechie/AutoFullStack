@@ -10,7 +10,7 @@ proj_simple_08,Simple,Incremental,course_catalog,Course Catalog,Pass,Pass,
 proj_simple_09,Simple,Incremental,prod_catalog,Product Catalog,Pass,Pass,
 proj_simple_10,Simple,Incremental,task_tracker,Task Tracker,Pass,Pass,
 proj_medium_01,Medium,Incremental,student_info_management_system,Student Information Management System,Pass,Pass,
-proj_medium_02,Medium,Incremental,hosp_pt_mgmt_sys,Hospital Patient Management System,Pass,Pass ,
+proj_medium_02,Medium,Incremental,hosp_pt_mgmt_sys,Hospital Patient Management System,Pass,Pass,
 proj_medium_03,Medium,Incremental,restaurant_mgmt_sys,Restaurant Management System,Pass,Pass,
 proj_medium_04,Medium,Incremental,lib_mgmt_sys,Library Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
 proj_medium_05,Medium,Incremental,company_asset_mgmt,Company Asset Management System,Pass,Pass,
