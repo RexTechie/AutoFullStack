@@ -1,0 +1,91 @@
+﻿Approach,Category,ProjectID,ProjectName,Runs,E2E,PFS,ProjectMFS4,AvgTokens,ModuleRecords,ModulesAtLeast4,PassedRuns
+Incremental,Complex,proj_complex_01,Comprehensive Hospital Management System,1,1.0,3.6666666666666665,0.6666666666666666,330381.0,6,4,1
+Incremental,Complex,proj_complex_02,Advanced University Management System,1,1.0,3.6666666666666665,0.6666666666666666,208648.0,6,4,1
+Incremental,Complex,proj_complex_03,Comprehensive E-commerce Management System,1,1.0,3.8333333333333335,0.6666666666666666,290975.0,6,4,1
+Incremental,Complex,proj_complex_04,Advanced Library Management System,1,1.0,3.8333333333333335,0.6666666666666666,197295.0,6,4,1
+Incremental,Complex,proj_complex_05,Comprehensive Hotel Management System,1,0.0,0.0,0.0,352180.0,6,0,0
+Incremental,Complex,proj_complex_06,Advanced Project Management System,1,1.0,1.8333333333333333,0.0,319651.0,6,0,1
+Incremental,Complex,proj_complex_07,Comprehensive School Management System,1,1.0,4.166666666666667,0.8333333333333334,232121.0,6,5,1
+Incremental,Complex,proj_complex_08,Advanced Inventory Management System,1,1.0,2.6666666666666665,0.5,253648.0,6,3,1
+Incremental,Complex,proj_complex_09,Comprehensive Event Management System,1,1.0,3.5,0.5,325973.0,6,3,1
+Incremental,Complex,proj_complex_10,Advanced Customer Relationship Management System,1,1.0,3.0,0.3333333333333333,345993.0,6,2,1
+Incremental,Medium,proj_medium_01,Student Information Management System,1,1.0,5.0,1.0,110495.0,3,3,1
+Incremental,Medium,proj_medium_02,Hospital Patient Management System,1,1.0,3.6666666666666665,0.3333333333333333,112999.0,3,1,1
+Incremental,Medium,proj_medium_03,Restaurant Management System,1,1.0,3.0,0.6666666666666666,194472.0,3,2,1
+Incremental,Medium,proj_medium_04,Library Management System,1,0.0,0.0,0.0,279617.0,3,0,0
+Incremental,Medium,proj_medium_05,Company Asset Management System,1,1.0,2.3333333333333335,0.3333333333333333,209974.0,3,1,1
+Incremental,Medium,proj_medium_06,Hotel Reservation System,1,1.0,3.0,0.5,232630.0,4,2,1
+Incremental,Medium,proj_medium_07,School Management System,1,1.0,4.25,0.75,171857.0,4,3,1
+Incremental,Medium,proj_medium_08,Inventory Management System,1,1.0,4.5,1.0,234626.0,4,4,1
+Incremental,Medium,proj_medium_09,Event Management System,1,1.0,4.25,0.75,180896.0,4,3,1
+Incremental,Medium,proj_medium_10,Project Management System,1,1.0,2.5,0.25,309498.0,4,1,1
+Incremental,Simple,proj_simple_01,Personal Contact Manager,1,1.0,5.0,1.0,47684.0,1,1,1
+Incremental,Simple,proj_simple_02,Book Collection Tracker,1,1.0,4.0,1.0,76903.0,1,1,1
+Incremental,Simple,proj_simple_03,Recipe Manager,1,1.0,5.0,1.0,98334.0,1,1,1
+Incremental,Simple,proj_simple_04,Event Planner,1,1.0,0.0,0.0,91974.0,1,0,1
+Incremental,Simple,proj_simple_05,Inventory Tracker,1,0.0,0.0,0.0,224205.0,1,0,0
+Incremental,Simple,proj_simple_06,Library Catalog,1,1.0,3.0,0.0,75739.0,1,0,1
+Incremental,Simple,proj_simple_07,Employee Directory,1,1.0,5.0,1.0,44402.0,1,1,1
+Incremental,Simple,proj_simple_08,Course Catalog,1,1.0,5.0,1.0,85401.0,1,1,1
+Incremental,Simple,proj_simple_09,Product Catalog,1,1.0,5.0,1.0,45661.0,1,1,1
+Incremental,Simple,proj_simple_10,Task Tracker,1,1.0,3.0,0.0,105399.0,1,0,1
+Incremental-NoSelfRefinement,Complex,proj_complex_01,Comprehensive Hospital Management System,1,0.0,0.0,0.0,208682.0,6,0,0
+Incremental-NoSelfRefinement,Complex,proj_complex_02,Advanced University Management System,1,0.0,0.0,0.0,210429.0,6,0,0
+Incremental-NoSelfRefinement,Complex,proj_complex_03,Comprehensive E-commerce Management System,1,0.0,0.0,0.0,189807.0,6,0,0
+Incremental-NoSelfRefinement,Complex,proj_complex_04,Advanced Library Management System,1,0.0,0.0,0.0,192070.0,6,0,0
+Incremental-NoSelfRefinement,Complex,proj_complex_05,Comprehensive Hotel Management System,1,0.0,0.0,0.0,196355.0,6,0,0
+Incremental-NoSelfRefinement,Complex,proj_complex_06,Advanced Project Management System,1,0.0,0.0,0.0,201410.0,6,0,0
+Incremental-NoSelfRefinement,Complex,proj_complex_07,Comprehensive School Management System,1,0.0,0.0,0.0,212188.0,6,0,0
+Incremental-NoSelfRefinement,Complex,proj_complex_08,Advanced Inventory Management System,1,0.0,0.0,0.0,174892.0,6,0,0
+Incremental-NoSelfRefinement,Complex,proj_complex_09,Comprehensive Event Management System,1,0.0,0.0,0.0,207521.0,6,0,0
+Incremental-NoSelfRefinement,Complex,proj_complex_10,Advanced Customer Relationship Management System,1,0.0,0.0,0.0,181394.0,6,0,0
+Incremental-NoSelfRefinement,Medium,proj_medium_01,Student Information Management System,1,1.0,5.0,1.0,110491.0,3,3,1
+Incremental-NoSelfRefinement,Medium,proj_medium_02,Hospital Patient Management System,1,1.0,4.333333333333333,1.0,97663.0,3,3,1
+Incremental-NoSelfRefinement,Medium,proj_medium_03,Restaurant Management System,1,0.0,0.0,0.0,104876.0,3,0,0
+Incremental-NoSelfRefinement,Medium,proj_medium_04,Library Management System,1,1.0,3.6666666666666665,0.3333333333333333,99248.0,3,1,1
+Incremental-NoSelfRefinement,Medium,proj_medium_05,Company Asset Management System,1,1.0,3.3333333333333335,0.3333333333333333,98481.0,3,1,1
+Incremental-NoSelfRefinement,Medium,proj_medium_06,Hotel Reservation System,1,0.0,0.0,0.0,149713.0,4,0,0
+Incremental-NoSelfRefinement,Medium,proj_medium_07,School Management System,1,0.0,0.0,0.0,132357.0,4,0,0
+Incremental-NoSelfRefinement,Medium,proj_medium_08,Inventory Management System,1,0.0,0.0,0.0,131349.0,4,0,0
+Incremental-NoSelfRefinement,Medium,proj_medium_09,Event Management System,1,0.0,0.0,0.0,130916.0,4,0,0
+Incremental-NoSelfRefinement,Medium,proj_medium_10,Project Management System,1,1.0,3.75,0.5,144515.0,4,2,1
+Incremental-NoSelfRefinement,Simple,proj_simple_01,Personal Contact Manager,1,1.0,5.0,1.0,39108.0,1,1,1
+Incremental-NoSelfRefinement,Simple,proj_simple_02,Book Collection Tracker,1,1.0,3.0,0.0,67938.0,1,0,1
+Incremental-NoSelfRefinement,Simple,proj_simple_03,Recipe Manager,1,1.0,4.0,1.0,36019.0,1,1,1
+Incremental-NoSelfRefinement,Simple,proj_simple_04,Event Planner,1,0.0,0.0,0.0,69998.0,1,0,0
+Incremental-NoSelfRefinement,Simple,proj_simple_05,Inventory Tracker,1,0.0,0.0,0.0,149733.0,1,0,0
+Incremental-NoSelfRefinement,Simple,proj_simple_06,Library Catalog,1,1.0,4.0,1.0,37816.0,1,1,1
+Incremental-NoSelfRefinement,Simple,proj_simple_07,Employee Directory,1,1.0,5.0,1.0,44260.0,1,1,1
+Incremental-NoSelfRefinement,Simple,proj_simple_08,Course Catalog,1,0.0,0.0,0.0,39104.0,1,0,0
+Incremental-NoSelfRefinement,Simple,proj_simple_09,Product Catalog,1,1.0,5.0,1.0,40645.0,1,1,1
+Incremental-NoSelfRefinement,Simple,proj_simple_10,Task Tracker,1,1.0,3.0,0.0,38254.0,1,0,1
+Waterfall,Complex,proj_complex_01,Comprehensive Hospital Management System,1,0.0,0.0,0.0,644864.0,6,0,0
+Waterfall,Complex,proj_complex_02,Advanced University Management System,1,0.0,0.0,0.0,688685.0,6,0,0
+Waterfall,Complex,proj_complex_03,Comprehensive E-commerce Management System,1,0.0,0.0,0.0,623912.0,6,0,0
+Waterfall,Complex,proj_complex_04,Advanced Library Management System,1,1.0,3.6666666666666665,0.5,644299.0,6,3,1
+Waterfall,Complex,proj_complex_05,Comprehensive Hotel Management System,1,0.0,0.0,0.0,652645.0,6,0,0
+Waterfall,Complex,proj_complex_06,Advanced Project Management System,1,0.0,0.0,0.0,680870.0,6,0,0
+Waterfall,Complex,proj_complex_07,Comprehensive School Management System,1,0.0,0.0,0.0,677924.0,6,0,0
+Waterfall,Complex,proj_complex_08,Advanced Inventory Management System,1,0.0,0.0,0.0,543884.0,6,0,0
+Waterfall,Complex,proj_complex_09,Comprehensive Event Management System,1,1.0,3.1666666666666665,0.5,230791.0,6,3,1
+Waterfall,Complex,proj_complex_10,Advanced Customer Relationship Management System,1,1.0,2.6666666666666665,0.5,560359.0,6,3,1
+Waterfall,Medium,proj_medium_01,Student Information Management System,1,0.0,0.0,0.0,96526.0,3,0,0
+Waterfall,Medium,proj_medium_02,Hospital Patient Management System,1,0.0,0.0,0.0,260720.0,3,0,0
+Waterfall,Medium,proj_medium_03,Restaurant Management System,1,0.0,0.0,0.0,270922.0,3,0,0
+Waterfall,Medium,proj_medium_04,Library Management System,1,1.0,2.3333333333333335,0.3333333333333333,273495.0,3,1,1
+Waterfall,Medium,proj_medium_05,Company Asset Management System,1,1.0,3.3333333333333335,0.3333333333333333,95141.0,3,1,1
+Waterfall,Medium,proj_medium_06,Hotel Reservation System,1,0.0,0.0,0.0,367415.0,4,0,0
+Waterfall,Medium,proj_medium_07,School Management System,1,0.0,0.0,0.0,381342.0,4,0,0
+Waterfall,Medium,proj_medium_08,Inventory Management System,1,1.0,4.25,0.75,336092.0,4,3,1
+Waterfall,Medium,proj_medium_09,Event Management System,1,0.0,0.0,0.0,347114.0,4,0,0
+Waterfall,Medium,proj_medium_10,Project Management System,1,0.0,0.0,0.0,370734.0,4,0,0
+Waterfall,Simple,proj_simple_01,Personal Contact Manager,1,1.0,1.0,0.0,80080.0,1,0,1
+Waterfall,Simple,proj_simple_02,Book Collection Tracker,1,1.0,5.0,1.0,153254.0,1,1,1
+Waterfall,Simple,proj_simple_03,Recipe Manager,1,1.0,3.0,0.0,84048.0,1,0,1
+Waterfall,Simple,proj_simple_04,Event Planner,1,1.0,3.0,0.0,108470.0,1,0,1
+Waterfall,Simple,proj_simple_05,Inventory Tracker,1,0.0,0.0,0.0,168690.0,1,0,0
+Waterfall,Simple,proj_simple_06,Library Catalog,1,1.0,3.0,0.0,35183.0,1,0,1
+Waterfall,Simple,proj_simple_07,Employee Directory,1,1.0,3.0,0.0,40843.0,1,0,1
+Waterfall,Simple,proj_simple_08,Course Catalog,1,1.0,5.0,1.0,40991.0,1,1,1
+Waterfall,Simple,proj_simple_09,Product Catalog,1,1.0,5.0,1.0,80227.0,1,1,1
+Waterfall,Simple,proj_simple_10,Task Tracker,1,0.0,0.0,0.0,189089.0,1,0,0

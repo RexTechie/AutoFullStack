@@ -1,0 +1,9 @@
+﻿Method,Metric,Difference,95% CI,p,Holm p
+vs. Waterfall,E2E (pp),+51.1,"[+41.1, +60.0]",<0.001,<0.001
+vs. Waterfall,PFS (points),+1.80,"[+1.43, +2.17]",<0.001,<0.001
+vs. Waterfall,MFS@4 (pp),+34.3,"[+25.6, +43.6]",<0.001,<0.001
+vs. Waterfall,Tokens,"-126,633.5","[-143,764.6, -108,943.8]",<0.001,<0.001
+vs. Incremental w/o Self-Refinement,E2E (pp),+62.2,"[+54.4, +70.0]",<0.001,<0.001
+vs. Incremental w/o Self-Refinement,PFS (points),+2.20,"[+1.80, +2.60]",<0.001,<0.001
+vs. Incremental w/o Self-Refinement,MFS@4 (pp),+43.5,"[+34.3, +52.6]",<0.001,<0.001
+vs. Incremental w/o Self-Refinement,Tokens,"+52,017.6","[+43,228.1, +60,882.5]",<0.001,<0.001

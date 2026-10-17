@@ -1,0 +1,20 @@
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+\begin{tabular}{llrrr}
+\toprule
+Method & Complexity & E2E & PFS & MFS@4 \\
+\midrule
+Incremental & Simple & 93.3\% $\pm$ 5.8\% & 3.37 $\pm$ 0.32 & 50.0\% $\pm$ 10.0\% \\
+Incremental & Medium & 93.3\% $\pm$ 5.8\% & 3.39 $\pm$ 0.26 & 51.4\% $\pm$ 5.7\% \\
+Incremental & Complex & 90.0\% $\pm$ 10.0\% & 3.24 $\pm$ 0.34 & 52.8\% $\pm$ 5.1\% \\
+Incremental & Overall & 92.2\% $\pm$ 6.9\% & 3.33 $\pm$ 0.28 & 52.1\% $\pm$ 3.3\% \\
+Waterfall & Simple & 63.3\% $\pm$ 15.3\% & 2.33 $\pm$ 0.50 & 26.7\% $\pm$ 5.8\% \\
+Waterfall & Medium & 36.7\% $\pm$ 11.5\% & 1.41 $\pm$ 0.59 & 21.0\% $\pm$ 11.5\% \\
+Waterfall & Complex & 23.3\% $\pm$ 5.8\% & 0.86 $\pm$ 0.11 & 14.4\% $\pm$ 2.5\% \\
+Waterfall & Overall & 41.1\% $\pm$ 6.9\% & 1.53 $\pm$ 0.24 & 17.8\% $\pm$ 2.7\% \\
+\bottomrule
+\end{tabular}
+}
+\par\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize Notes: Entries are the combined estimate $\pm$ sample SD of 3 run-level aggregates (ddof=1), not SE or CI; rate SDs correspond to percentage points. There are 10 paired tasks per complexity and 30 overall; repeat outcomes are not independent tasks. MFS@4 pools successful modules and module totals. E2E requires both the front end and back end to pass build/compilation and startup checks; it does not imply complete business functionality.
+\end{minipage}

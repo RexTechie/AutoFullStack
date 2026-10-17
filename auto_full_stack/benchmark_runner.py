@@ -214,7 +214,7 @@ def main():
     complexity_keys = list(DATASET_FILES.keys()) if args.complexity == "all" else [args.complexity]
 
     fieldnames = [
-        "ProjectID", "Category", "Approach", "WorkspaceRoot", "ProjectPath", "Namespace", "Status", "CompilePassHeuristic",
+        "ProjectID", "Category", "Approach", "Namespace", "Status", "CompilePassHeuristic",
         "ModuleSuccess", "AvgModuleRetry_or_GlobalAttempts", 
         "TotalTokens", "TimeElapsed(s)", "TotalLines", "ErrorMsg"
     ]

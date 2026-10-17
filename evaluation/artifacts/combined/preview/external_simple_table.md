@@ -1,0 +1,14 @@
+| Method | Complexity | E2E | PFS | MFS@4 |
+| --- | --- | --- | --- | --- |
+| Incremental | Simple | 93.3% ± 5.8% | 3.37 ± 0.32 | 50.0% ± 10.0% |
+| MetaGPT | Simple | 20.0% ± 10.0% | 0.53 ± 0.32 | 10.0% ± 10.0% |
+
+Notes: Simple tasks only: n=10 paired task clusters with 3 observed runs per method and one module per task/run. Repeated outcomes are not independent tasks.
+
+Entries are the combined estimate ± sample SD of run-level aggregates (ddof=1), not SE or CI; rate SDs correspond to percentage points.
+
+Plot whiskers are pointwise 95% percentile CIs from 30,000 paired task-cluster bootstrap samples within the single Simple stratum, retaining all observed repeats. The CIs condition on these repeats, not unobserved generation randomness.
+
+Bootstrap uses an independent analysis RNG with seed 12138, not an LLM generation seed. Zero-width empirical CIs do not imply certainty beyond these tasks/runs.
+
+E2E requires both the front end and back end to pass build/compilation and startup checks; it does not imply complete business functionality.

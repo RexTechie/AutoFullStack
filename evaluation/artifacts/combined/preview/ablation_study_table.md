@@ -1,0 +1,16 @@
+| Method | Complexity | E2E | PFS | MFS@4 |
+| --- | --- | --- | --- | --- |
+| Incremental | Simple | 93.3% ± 5.8% | 3.37 ± 0.32 | 50.0% ± 10.0% |
+| Incremental | Medium | 93.3% ± 5.8% | 3.39 ± 0.26 | 51.4% ± 5.7% |
+| Incremental | Complex | 90.0% ± 10.0% | 3.24 ± 0.34 | 52.8% ± 5.1% |
+| Incremental | Overall | 92.2% ± 6.9% | 3.33 ± 0.28 | 52.1% ± 3.3% |
+| Incremental w/o Self-Refinement | Simple | 63.3% ± 20.8% | 2.33 ± 0.98 | 30.0% ± 26.5% |
+| Incremental w/o Self-Refinement | Medium | 23.3% ± 25.2% | 0.94 ± 1.01 | 14.3% ± 14.3% |
+| Incremental w/o Self-Refinement | Complex | 3.3% ± 5.8% | 0.12 ± 0.20 | 1.7% ± 2.9% |
+| Incremental w/o Self-Refinement | Overall | 30.0% ± 8.8% | 1.13 ± 0.45 | 8.6% ± 5.3% |
+
+Notes: Entries are the combined estimate ± sample SD of 3 run-level aggregates (ddof=1), not SE or CI; rate SDs correspond to percentage points.
+
+There are 10 paired tasks per complexity and 30 overall; repeat outcomes are not independent tasks. MFS@4 pools successful modules and module totals.
+
+E2E requires both the front end and back end to pass build/compilation and startup checks; it does not imply complete business functionality.

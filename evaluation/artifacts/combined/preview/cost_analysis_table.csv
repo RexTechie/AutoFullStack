@@ -1,0 +1,9 @@
+﻿Method,Complexity,Avg Tokens
+Incremental,Simple,"83,617.6 ± 6,977.7"
+Incremental,Medium,"165,189.5 ± 37,122.7"
+Incremental,Complex,"237,068.9 ± 42,751.7"
+Incremental,Overall,"161,958.7 ± 27,608.4"
+Waterfall,Simple,"118,715.0 ± 23,910.4"
+Waterfall,Medium,"255,743.1 ± 29,848.3"
+Waterfall,Complex,"491,318.2 ± 89,738.9"
+Waterfall,Overall,"288,592.1 ± 33,852.4"

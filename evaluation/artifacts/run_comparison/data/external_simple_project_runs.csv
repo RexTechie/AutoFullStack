@@ -1,0 +1,61 @@
+﻿Run,Approach,Category,ProjectID,ProjectName,Score(0-5),E2E,MFS4
+1,Incremental,Simple,proj_simple_01,Personal Contact Manager,5.0,1,1
+1,Incremental,Simple,proj_simple_02,Book Collection Tracker,4.0,1,1
+1,Incremental,Simple,proj_simple_03,Recipe Manager,5.0,1,1
+1,Incremental,Simple,proj_simple_04,Event Planner,0.0,1,0
+1,Incremental,Simple,proj_simple_05,Inventory Tracker,0.0,0,0
+1,Incremental,Simple,proj_simple_06,Library Catalog,3.0,1,0
+1,Incremental,Simple,proj_simple_07,Employee Directory,5.0,1,1
+1,Incremental,Simple,proj_simple_08,Course Catalog,5.0,1,1
+1,Incremental,Simple,proj_simple_09,Product Catalog,5.0,1,1
+1,Incremental,Simple,proj_simple_10,Task Tracker,3.0,1,0
+1,MetaGPT,Simple,proj_simple_01,Personal Contact Manager,0.0,0,0
+1,MetaGPT,Simple,proj_simple_02,Book Collection Tracker,0.0,0,0
+1,MetaGPT,Simple,proj_simple_03,Recipe Manager,0.0,0,0
+1,MetaGPT,Simple,proj_simple_04,Event Planner,0.0,0,0
+1,MetaGPT,Simple,proj_simple_05,Inventory Tracker,1.0,1,0
+1,MetaGPT,Simple,proj_simple_06,Library Catalog,0.0,0,0
+1,MetaGPT,Simple,proj_simple_07,Employee Directory,0.0,0,0
+1,MetaGPT,Simple,proj_simple_08,Course Catalog,2.0,1,0
+1,MetaGPT,Simple,proj_simple_09,Product Catalog,0.0,0,0
+1,MetaGPT,Simple,proj_simple_10,Task Tracker,0.0,0,0
+2,Incremental,Simple,proj_simple_01,Personal Contact Manager,5.0,1,1
+2,Incremental,Simple,proj_simple_02,Book Collection Tracker,4.0,1,1
+2,Incremental,Simple,proj_simple_03,Recipe Manager,3.0,1,0
+2,Incremental,Simple,proj_simple_04,Event Planner,5.0,1,1
+2,Incremental,Simple,proj_simple_05,Inventory Tracker,5.0,1,1
+2,Incremental,Simple,proj_simple_06,Library Catalog,0.0,1,0
+2,Incremental,Simple,proj_simple_07,Employee Directory,3.0,1,0
+2,Incremental,Simple,proj_simple_08,Course Catalog,5.0,1,1
+2,Incremental,Simple,proj_simple_09,Product Catalog,3.0,1,0
+2,Incremental,Simple,proj_simple_10,Task Tracker,3.0,1,0
+2,MetaGPT,Simple,proj_simple_01,Personal Contact Manager,0.0,0,0
+2,MetaGPT,Simple,proj_simple_02,Book Collection Tracker,0.0,0,0
+2,MetaGPT,Simple,proj_simple_03,Recipe Manager,1.0,1,0
+2,MetaGPT,Simple,proj_simple_04,Event Planner,4.0,1,1
+2,MetaGPT,Simple,proj_simple_05,Inventory Tracker,0.0,0,0
+2,MetaGPT,Simple,proj_simple_06,Library Catalog,0.0,0,0
+2,MetaGPT,Simple,proj_simple_07,Employee Directory,0.0,0,0
+2,MetaGPT,Simple,proj_simple_08,Course Catalog,0.0,0,0
+2,MetaGPT,Simple,proj_simple_09,Product Catalog,0.0,0,0
+2,MetaGPT,Simple,proj_simple_10,Task Tracker,4.0,1,1
+3,Incremental,Simple,proj_simple_01,Personal Contact Manager,5.0,1,1
+3,Incremental,Simple,proj_simple_02,Book Collection Tracker,4.0,1,1
+3,Incremental,Simple,proj_simple_03,Recipe Manager,3.0,1,0
+3,Incremental,Simple,proj_simple_04,Event Planner,0.0,0,0
+3,Incremental,Simple,proj_simple_05,Inventory Tracker,0.0,1,0
+3,Incremental,Simple,proj_simple_06,Library Catalog,3.0,1,0
+3,Incremental,Simple,proj_simple_07,Employee Directory,3.0,1,0
+3,Incremental,Simple,proj_simple_08,Course Catalog,4.0,1,1
+3,Incremental,Simple,proj_simple_09,Product Catalog,5.0,1,1
+3,Incremental,Simple,proj_simple_10,Task Tracker,3.0,1,0
+3,MetaGPT,Simple,proj_simple_01,Personal Contact Manager,0.0,0,0
+3,MetaGPT,Simple,proj_simple_02,Book Collection Tracker,0.0,0,0
+3,MetaGPT,Simple,proj_simple_03,Recipe Manager,0.0,0,0
+3,MetaGPT,Simple,proj_simple_04,Event Planner,0.0,0,0
+3,MetaGPT,Simple,proj_simple_05,Inventory Tracker,0.0,0,0
+3,MetaGPT,Simple,proj_simple_06,Library Catalog,0.0,0,0
+3,MetaGPT,Simple,proj_simple_07,Employee Directory,0.0,0,0
+3,MetaGPT,Simple,proj_simple_08,Course Catalog,0.0,0,0
+3,MetaGPT,Simple,proj_simple_09,Product Catalog,4.0,1,1
+3,MetaGPT,Simple,proj_simple_10,Task Tracker,0.0,0,0

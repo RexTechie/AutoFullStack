@@ -1,0 +1,102 @@
+ProjectID,Category,Approach,Namespace,ProjectName,Backend,Frontend,Notes
+proj_simple_01,Simple,Incremental,personal_contact_manager,Personal Contact Manager,Pass,Pass,
+proj_simple_02,Simple,Incremental,book_collection_tracker,Book Collection Tracker,Pass,Pass,
+proj_simple_03,Simple,Incremental,recipe_manager,Recipe Manager,Pass,Pass,
+proj_simple_04,Simple,Incremental,event_planner,Event Planner,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_simple_05,Simple,Incremental,inventory_tracker,Inventory Tracker,Pass,Pass,
+proj_simple_06,Simple,Incremental,library_catalog,Library Catalog,Pass,Pass,
+proj_simple_07,Simple,Incremental,employee_directory,Employee Directory,Pass,Pass,
+proj_simple_08,Simple,Incremental,course_catalog,Course Catalog,Pass,Pass,
+proj_simple_09,Simple,Incremental,product_catalog,Product Catalog,Pass,Pass,
+proj_simple_10,Simple,Incremental,task_tracker,Task Tracker,Pass,Pass,
+proj_medium_01,Medium,Incremental,student_info_management_system,Student Information Management System,Pass,Pass,
+proj_medium_02,Medium,Incremental,hospital_patient_mgmt_system,Hospital Patient Management System,Pass,Pass,
+proj_medium_03,Medium,Incremental,restaurant_management_system,Restaurant Management System,Pass,Failure,"Frontend: Syntax Error: Unexpected token (1:3957)"
+proj_medium_04,Medium,Incremental,library_management_sys,Library Management System,Pass,Pass,
+proj_medium_05,Medium,Incremental,company_asset_mgmt,Company Asset Management System,Pass,Pass,
+proj_medium_06,Medium,Incremental,hotel_reservation_system,Hotel Reservation System,Pass,Pass,
+proj_medium_07,Medium,Incremental,school_management_system,School Management System,Pass,Pass,
+proj_medium_08,Medium,Incremental,inventory_manager,Inventory Management System,Pass,Pass,
+proj_medium_09,Medium,Incremental,event_mgmt_sys,Event Management System,Pass,Pass,
+proj_medium_10,Medium,Incremental,project_management_system,Project Management System,Pass,Pass,
+proj_complex_01,Complex,Incremental,comprehensive_hospital_management_system,Comprehensive Hospital Management System,Pass,Pass,
+proj_complex_02,Complex,Incremental,advanced_university_mgmt_sys,Advanced University Management System,Pass,Pass,
+proj_complex_03,Complex,Incremental,comprehensive_ecom_mgmt_system,Comprehensive E-commerce Management System,Pass,Pass,
+proj_complex_04,Complex,Incremental,advanced_lib_mgmt,Advanced Library Management System,Pass,Pass,
+proj_complex_05,Complex,Incremental,comprehensive_hotel_mgmt_system,Comprehensive Hotel Management System,Pass,Pass,
+proj_complex_06,Complex,Incremental,advanced_project_management_system,Advanced Project Management System,Pass,Failure,"Frontend: Syntax Error: Unexpected token (1:4079)"
+proj_complex_07,Complex,Incremental,comprehensive_school_mgmt_sys,Comprehensive School Management System,Pass,Pass,
+proj_complex_08,Complex,Incremental,advanced_inventory_mgmt,Advanced Inventory Management System,Pass,Pass,
+proj_complex_09,Complex,Incremental,comprehensive_event_mgmt_system,Comprehensive Event Management System,Pass,Pass,
+proj_complex_10,Complex,Incremental,advanced_crm_system,Advanced Customer Relationship Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+
+proj_simple_01,Simple,Waterfall,personal_contact_manager,Personal Contact Manager,Pass,Pass,
+proj_simple_02,Simple,Waterfall,book_collection_tracker,Book Collection Tracker,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_simple_03,Simple,Waterfall,recipe_manager,Recipe Manager,Pass,Pass,
+proj_simple_04,Simple,Waterfall,event_planner,Event Planner,Pass,Pass,
+proj_simple_05,Simple,Waterfall,inventory_tracker,Inventory Tracker,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_simple_06,Simple,Waterfall,library_catalog,Library Catalog,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_simple_07,Simple,Waterfall,employee_directory,Employee Directory,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_simple_08,Simple,Waterfall,course_catalog,Course Catalog,Pass,Pass,
+proj_simple_09,Simple,Waterfall,product_catalog,Product Catalog,Failure,Pass,"Failure: [INFO] BUILD FAILURE"
+proj_simple_10,Simple,Waterfall,task_tracker,Task Tracker,Pass,Pass,
+proj_medium_01,Medium,Waterfall,student_info_management,Student Information Management System,Pass,Pass,
+proj_medium_02,Medium,Waterfall,hospital_patient_mgmt,Hospital Patient Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_medium_03,Medium,Waterfall,restaurant_management_system,Restaurant Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_medium_04,Medium,Waterfall,library_management_system,Library Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_medium_05,Medium,Waterfall,company_asset_management,Company Asset Management System,Pass,Pass,
+proj_medium_06,Medium,Waterfall,hotel_reservation_system,Hotel Reservation System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_medium_07,Medium,Waterfall,school_management_system,School Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_medium_08,Medium,Waterfall,inventory_mgmt_sys,Inventory Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_medium_09,Medium,Waterfall,event_management_system,Event Management System,Pass,Pass,
+proj_medium_10,Medium,Waterfall,proj_mgmt_sys,Project Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_complex_01,Complex,Waterfall,comprehensive_hospital_system,Comprehensive Hospital Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_complex_02,Complex,Waterfall,advanced_university_management_system,Advanced University Management System,Failure,Pass,"[INFO] BUILD FAILURE"
+proj_complex_03,Complex,Waterfall,comprehensive_ecom_management_system,Comprehensive E-commerce Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_complex_04,Complex,Waterfall,advanced_lib_mgmt_sys,Advanced Library Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_complex_05,Complex,Waterfall,comprehensive_hotel_mgmt_system,Comprehensive Hotel Management System,Pass,Pass,
+proj_complex_06,Complex,Waterfall,advanced_project_manager,Advanced Project Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_complex_07,Complex,Waterfall,comprehensive_school_mgmt,Comprehensive School Management System,Pass,Pass,
+proj_complex_08,Complex,Waterfall,advanced_inventory_mgmt,Advanced Inventory Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_complex_09,Complex,Waterfall,comprehensive_event_mgmt_system,Comprehensive Event Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_complex_10,Complex,Waterfall,advanced_crm_system,Advanced Customer Relationship Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_simple_01,Simple,Incremental-NoSelfRefinement,personal_contact_manager,Personal Contact Manager,Pass,Pass,
+proj_simple_02,Simple,Incremental-NoSelfRefinement,booktracker,Book Collection Tracker,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_simple_03,Simple,Incremental-NoSelfRefinement,recipe_manager,Recipe Manager,Pass,Pass,
+proj_simple_04,Simple,Incremental-NoSelfRefinement,event_planner,Event Planner,Pass,Pass,
+proj_simple_05,Simple,Incremental-NoSelfRefinement,inventory_tracker,Inventory Tracker,Pass,Pass,
+proj_simple_06,Simple,Incremental-NoSelfRefinement,library_catalog,Library Catalog,Pass,Pass,
+proj_simple_07,Simple,Incremental-NoSelfRefinement,employee_directory,Employee Directory,Pass,Pass,
+proj_simple_08,Simple,Incremental-NoSelfRefinement,course_catalog,Course Catalog,Pass,Pass,
+proj_simple_09,Simple,Incremental-NoSelfRefinement,product_catalog,Product Catalog,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_simple_10,Simple,Incremental-NoSelfRefinement,task_tracker,Task Tracker,Pass,Pass,
+proj_medium_01,Medium,Incremental-NoSelfRefinement,student_info_management_system,Student Information Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_medium_02,Medium,Incremental-NoSelfRefinement,hospital_patient_mgmt_sys,Hospital Patient Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_medium_03,Medium,Incremental-NoSelfRefinement,restaurant_management_system,Restaurant Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_medium_04,Medium,Incremental-NoSelfRefinement,library_management_sys,Library Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_medium_05,Medium,Incremental-NoSelfRefinement,company_asset_mgmt,Company Asset Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_medium_06,Medium,Incremental-NoSelfRefinement,hotel_reservation_system,Hotel Reservation System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_medium_07,Medium,Incremental-NoSelfRefinement,school_management_system,School Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_medium_08,Medium,Incremental-NoSelfRefinement,inventory_manager,Inventory Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_medium_09,Medium,Incremental-NoSelfRefinement,event_manager,Event Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_medium_10,Medium,Incremental-NoSelfRefinement,project_management_system,Project Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_complex_01,Complex,Incremental-NoSelfRefinement,comprehensive_hospital_management_system,Comprehensive Hospital Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_complex_02,Complex,Incremental-NoSelfRefinement,advanced_university_management_system,Advanced University Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_complex_03,Complex,Incremental-NoSelfRefinement,comprehensive_ecom_management_system,Comprehensive E-commerce Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_complex_04,Complex,Incremental-NoSelfRefinement,advanced_lib_mgmt,Advanced Library Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_complex_05,Complex,Incremental-NoSelfRefinement,comprehensive_hotel_mgmt_sys,Comprehensive Hotel Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_complex_06,Complex,Incremental-NoSelfRefinement,advanced_project_management_system,Advanced Project Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_complex_07,Complex,Incremental-NoSelfRefinement,comprehensive_school_management_system,Comprehensive School Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_complex_08,Complex,Incremental-NoSelfRefinement,advanced_inventory_system,Advanced Inventory Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_complex_09,Complex,Incremental-NoSelfRefinement,event_mgmt_system,Comprehensive Event Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_complex_10,Complex,Incremental-NoSelfRefinement,advanced_crm_system,Advanced Customer Relationship Management System,Failure,Pass,"Backend: [INFO] BUILD FAILURE"
+proj_simple_01,Simple,MetaGPT,personal_contact_manager,Personal Contact Manager,Pass,Failure,"Frontend: public/index.html is missing, causing frontend compilation failure."
+proj_simple_02,Simple,MetaGPT,book_tracker,Book Collection Tracker,Pass,Failure,"Frontend: vite.config.js uses an unsupported dynamic require of tailwindcss, causing frontend build failure."
+proj_simple_03,Simple,MetaGPT,recipe_manager,Recipe Manager,Pass,Failure,"Frontend: src/components/Header.js is missing the opening comment delimiter, causing compilation failure."
+proj_simple_04,Simple,MetaGPT,event_planner_pro,Event Planner,Failure,Pass,"Backend: utils/errors.js is missing, causing startup failure."
+proj_simple_05,Simple,MetaGPT,inventory_tracker,Inventory Tracker,Pass,Failure,"Frontend: src/index.css is missing, causing frontend compilation failure."
+proj_simple_06,Simple,MetaGPT,library_catalog_system,Library Catalog,Failure,Failure,"Backend: models/Book.js has an invalid versionKey setting, causing startup failure; Frontend: public/index.html is missing, causing compilation failure."
+proj_simple_07,Simple,MetaGPT,employee_directory_system,Employee Directory,Failure,Failure,"Backend: config/db.js is empty and does not export connectDB, causing startup failure; Frontend: src/tailwind.css is missing, causing frontend build failure."
+proj_simple_08,Simple,MetaGPT,course_catalog_system,Course Catalog,Pass,Failure,"Frontend: vite.config.js uses an unsupported dynamic require of tailwindcss, causing frontend build failure."
+proj_simple_09,Simple,MetaGPT,product_catalog_manager,Product Catalog,Pass,Pass,
+proj_simple_10,Simple,MetaGPT,task_tracker_pro,Task Tracker,Pass,Failure,"Frontend: TaskItem.js calls useCallback conditionally, causing frontend compilation failure."

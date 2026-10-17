@@ -1,0 +1,10 @@
+| Method | Complexity | E2E | PFS | MFS@4 |
+| --- | --- | --- | --- | --- |
+| Incremental | Simple | 90.0% | 3.00 | 40.0% |
+| Incremental | Medium | 90.0% | 3.23 | 45.7% |
+| Incremental | Complex | 80.0% | 3.07 | 51.7% |
+| Incremental | Overall | 86.7% | 3.10 | 48.6% |
+| Incremental w/o Self-Refinement | Simple | 80.0% | 2.90 | 40.0% |
+| Incremental w/o Self-Refinement | Medium | 0.0% | 0.00 | 0.0% |
+| Incremental w/o Self-Refinement | Complex | 0.0% | 0.00 | 0.0% |
+| Incremental w/o Self-Refinement | Overall | 26.7% | 0.97 | 3.8% |

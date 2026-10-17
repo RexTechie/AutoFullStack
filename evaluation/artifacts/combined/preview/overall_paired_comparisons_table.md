@@ -1,0 +1,20 @@
+| Method | Metric | Difference | 95% CI | p | Holm p |
+| --- | --- | --- | --- | --- | --- |
+| vs. Waterfall | E2E (pp) | +51.1 | [+41.1, +60.0] | <0.001 | <0.001 |
+| vs. Waterfall | PFS (points) | +1.80 | [+1.43, +2.17] | <0.001 | <0.001 |
+| vs. Waterfall | MFS@4 (pp) | +34.3 | [+25.6, +43.6] | <0.001 | <0.001 |
+| vs. Waterfall | Tokens | -126,633.5 | [-143,764.6, -108,943.8] | <0.001 | <0.001 |
+| vs. Incremental w/o Self-Refinement | E2E (pp) | +62.2 | [+54.4, +70.0] | <0.001 | <0.001 |
+| vs. Incremental w/o Self-Refinement | PFS (points) | +2.20 | [+1.80, +2.60] | <0.001 | <0.001 |
+| vs. Incremental w/o Self-Refinement | MFS@4 (pp) | +43.5 | [+34.3, +52.6] | <0.001 | <0.001 |
+| vs. Incremental w/o Self-Refinement | Tokens | +52,017.6 | [+43,228.1, +60,882.5] | <0.001 | <0.001 |
+
+Notes: All effects are Incremental minus comparator, using 30 paired tasks averaged across 3 selected runs. Positive quality differences favor Incremental; negative Token differences favor Incremental. pp denotes percentage points.
+
+95% CIs use 30,000 paired, complexity-stratified task-cluster bootstrap samples, retaining repeats/modules and conditioning on observed repeats. These are pointwise, not family-wise intervals.
+
+Two-sided paired label-swap permutation tests use 199,999 Monte Carlo permutations and the plus-one correction. Method labels are swapped once per task for all repeats/modules together, assuming exchangeability under the null.
+
+Holm p adjusts one family of 8 overall comparisons: two comparators x E2E, PFS, MFS@4, and Tokens. No per-complexity significance tests are performed; an unadjusted CI excluding zero need not imply Holm-adjusted significance.
+
+Task clusters are treated as independent. Analysis RNG seed 12138 is not an LLM generation seed. * A zero-width empirical CI is not proof of certainty. Recorded E2E covers build/compilation and startup, not complete business functionality.

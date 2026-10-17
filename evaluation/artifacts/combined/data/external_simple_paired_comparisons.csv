@@ -1,0 +1,4 @@
+﻿Approach,Comparator,Category,Metric,Difference,CILow,CIHigh,CIDegenerate,PValue,PHolm,Projects,RunsPerProject,ProjectRuns,ProjectsHigher,ProjectsEqual,ProjectsLower,ExactPermutations,TestMethod,Family,FamilySize,BootstrapSamples,AnalysisSeed,Unit
+Incremental,MetaGPT,Simple,E2E,0.7333333333333335,0.5666666666666668,0.8666666666666668,False,0.001953125,0.005859375,10,3,30,10,0,0,1024,exact_two_sided_task_label_swap,external_simple_quality,3,30000,12138,proportion
+Incremental,MetaGPT,Simple,PFS,2.8333333333333335,1.9666666666666668,3.6666666666666665,False,0.001953125,0.005859375,10,3,30,10,0,0,1024,exact_two_sided_task_label_swap,external_simple_quality,3,30000,12138,score points
+Incremental,MetaGPT,Simple,MFS4,0.39999999999999997,0.13333333333333333,0.6666666666666666,False,0.046875,0.046875,10,3,30,7,2,1,1024,exact_two_sided_task_label_swap,external_simple_quality,3,30000,12138,proportion

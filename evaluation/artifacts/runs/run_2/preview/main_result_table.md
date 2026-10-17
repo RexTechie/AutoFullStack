@@ -1,0 +1,10 @@
+| Method | Complexity | E2E | PFS | MFS@4 |
+| --- | --- | --- | --- | --- |
+| Incremental | Simple | 100.0% | 3.60 | 50.0% |
+| Incremental | Medium | 100.0% | 3.68 | 51.4% |
+| Incremental | Complex | 100.0% | 3.63 | 58.3% |
+| Incremental | Overall | 100.0% | 3.64 | 55.2% |
+| Waterfall | Simple | 60.0% | 2.40 | 30.0% |
+| Waterfall | Medium | 50.0% | 2.08 | 34.3% |
+| Waterfall | Complex | 20.0% | 0.73 | 11.7% |
+| Waterfall | Overall | 43.3% | 1.74 | 21.0% |

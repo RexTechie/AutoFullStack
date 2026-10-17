@@ -1,0 +1,9 @@
+﻿Approach,Comparator,Metric,Difference,CILow,CIHigh,CIDegenerate,PValue,PHolm,Projects,RunsPerProject,ProjectRuns,ProjectsHigher,ProjectsEqual,ProjectsLower,Unit
+Incremental,Waterfall,E2E,0.5111111111111112,0.4111111111111112,0.6000000000000001,False,5e-06,4e-05,30,3,90,26,4,0,proportion
+Incremental,Waterfall,PFS,1.7990740740740743,1.4250000000000012,2.1740972222222212,False,5e-06,4e-05,30,3,90,26,2,2,score points
+Incremental,Waterfall,MFS4,0.34285714285714286,0.2564102564102564,0.4358974358974359,False,5e-06,4e-05,30,3,90,24,5,1,proportion
+Incremental,Waterfall,Tokens,-126633.45555555556,-143764.61111111115,-108943.80361111114,False,5e-06,4e-05,30,3,90,4,0,26,tokens
+Incremental,Incremental-NoSelfRefinement,E2E,0.6222222222222222,0.5444444444444443,0.7000000000000002,False,5e-06,4e-05,30,3,90,26,4,0,proportion
+Incremental,Incremental-NoSelfRefinement,PFS,2.1990740740740744,1.8027777777777785,2.604629629629629,False,5e-06,4e-05,30,3,90,27,2,1,score points
+Incremental,Incremental-NoSelfRefinement,MFS4,0.43492063492063493,0.3427672955974843,0.5264797507788161,False,5e-06,4e-05,30,3,90,24,4,2,proportion
+Incremental,Incremental-NoSelfRefinement,Tokens,52017.62222222223,43228.093611111086,60882.53416666669,False,5e-06,4e-05,30,3,90,29,0,1,tokens

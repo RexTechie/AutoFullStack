@@ -20,7 +20,10 @@ AutoFullStack/
 |   |-- app.py                # Entry point for running a single project generation task
 |   `-- benchmark_runner.py   # Batch runner for benchmark tasks
 |-- data/                     # Benchmark task descriptions
-|-- experiment_results/       # CSV files used for the reported experimental results
+|-- experiment_results/       # Generation and evaluation records for three runs
+|-- evaluation/
+|   |-- scripts/              # Analysis scripts for the recorded experiments
+|   `-- artifacts/            # Tables, figures, and supporting data
 |-- .env.example              # Example environment configuration
 |-- requirements.txt          # Python dependencies
 `-- README.md
@@ -249,26 +252,56 @@ experiment_results/
 
 For unattended batch execution, `benchmark_runner.py` runs the planning and development stages and skips the operations workflow. This means it records generation statistics such as status, module-level verification results, token usage, elapsed time, and generated lines of code, but it does not automatically perform the final backend/frontend runtime check for every generated project.
 
-## Experiment Results
+## Experiment Results and Reproduction
 
-The `experiment_results/` directory contains the CSV files used to summarize the experiments reported in the paper.
+The records accompanying the revised paper are organized into three generation and evaluation runs:
 
 ```text
 experiment_results/
-|-- benchmark_results_incremental_all_20260314_104325.csv
-|-- benchmark_results_incremental_no_self_refinement_all_20260409_214202.csv
-|-- benchmark_results_waterfall_all_20260318_165450.csv
-|-- eval_e2e_executability.csv
-|-- eval_functional_correctness.csv
+|-- run_1/
+|   |-- benchmark_results_*.csv          # Three files, one per AutoFullStack variant
+|   |-- eval_e2e_executability.csv
+|   `-- eval_functional_correctness.csv
+|-- run_2/                              # Same file types
+`-- run_3/                              # Same file types
 ```
 
-The `benchmark_results_*.csv` files are produced by `benchmark_runner.py`. They record project-level generation statistics, including generation status, module verification summary, token usage, elapsed time, and generated lines of code for each workflow variant.
+Each run contains generation statistics for 30 tasks under each of the Incremental, Waterfall, and Incremental-NoSelfRefinement variants. The evaluation CSVs also contain the MetaGPT comparison on the 10 Simple tasks.
 
-`eval_e2e_executability.csv` records backend and frontend build results for generated projects. It is used to summarize end-to-end executability at the project level.
+The `benchmark_results_*.csv` files are produced by `benchmark_runner.py`. They record generation status, module-level verification results, token usage, elapsed time, and generated lines of code. Generation-stage verification fields, including `CompilePassHeuristic`, are separate from the final project-level evaluation.
 
-`eval_functional_correctness.csv` records module-level functional scores. Each row corresponds to one generated module and contains a score from 0 to 5, together with evaluator notes.
+`eval_e2e_executability.csv` records the final backend and frontend executability outcomes in the `Backend` and `Frontend` columns, using `Pass` or `Failure`. The evaluation protocol requires successful build/compilation, startup, and runtime checks; project-level success requires both components to pass.
 
-These files are provided as experiment artifacts. Re-running the benchmark may produce different outputs because the framework depends on LLM generation, external API latency, and the local execution environment.
+`eval_functional_correctness.csv` records each module's final score from 0 to 5 and evaluator observations. Functional evaluation considers the requested backend APIs, frontend pages, and frontend-backend interactions against the original task requirements, following the scoring rubric in the paper.
+
+### Repeating Generation and Evaluation
+
+For the AutoFullStack experiments reported in the paper, the generation model was DeepSeek-V3.2 with a temperature of 0.7. Each task was generated and evaluated three times under each method. Set `LLM_BASE_URL` and `LLM_MODEL` for an API endpoint serving this model; the required model identifier depends on the provider. The example environment configuration is intended for general framework use.
+
+To repeat generation, run each AutoFullStack variant separately for each repetition using the batch commands above. Use a separate `--workspace-base` for each repetition and retain its timestamped benchmark CSV. The runner writes these CSVs directly to `experiment_results/`; it does not automatically organize them into `run_1/`, `run_2/`, and `run_3/`.
+
+After generation, perform the final component checks and human functional evaluation separately, and record the outcomes, module scores, and observations in the corresponding evaluation CSVs. The batch runner skips the operations workflow, and neither it nor the analysis scripts automatically populate these evaluation records. The batch commands above apply to the AutoFullStack variants; they do not run MetaGPT.
+
+### Recomputing Tables and Figures from Existing Records
+
+The analysis scripts in `evaluation/scripts/` read the supplied CSVs without invoking LLM generation or running the generated applications. The analysis uses NumPy and Matplotlib. To regenerate the tables, figures, and statistical summaries, run from the repository root:
+
+```bash
+python evaluation/scripts/generate_experiment_artifacts.py
+```
+
+By default, the script reads all three runs and writes the following output structure:
+
+```text
+evaluation/artifacts/
+|-- combined/                # Combined results and paired statistical summaries
+|-- runs/                    # Separate outputs for run_1, run_2, and run_3
+`-- run_comparison/          # Cross-run summaries and figures
+```
+
+Each scope separates LaTeX `tables/`, publication PDF `figures/`, full-precision CSV `data/`, and formatted `preview/` files. Artifacts for the Simple-only MetaGPT quality comparison use the `external_simple_` filename prefix.
+
+Use `--runs` to select existing runs for analysis, `--tables-only` to omit figure rendering, or `--output-dir` to change the output destination. The analysis targets the supplied three-run records through the explicit benchmark filename mapping in `evaluation/scripts/experiment_data.py`. Newly generated, timestamped outputs require separate organization and an updated filename mapping before analysis.
 
 ## Notes and Limitations
 

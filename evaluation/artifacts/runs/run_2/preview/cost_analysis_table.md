@@ -1,0 +1,10 @@
+| Method | Complexity | Avg Tokens |
+| --- | --- | --- |
+| Incremental | Simple | 85343.7 |
+| Incremental | Medium | 129639.0 |
+| Incremental | Complex | 205347.3 |
+| Incremental | Overall | 140110.0 |
+| Waterfall | Simple | 113135.7 |
+| Waterfall | Medium | 222392.6 |
+| Waterfall | Complex | 435311.0 |
+| Waterfall | Overall | 256946.4 |

@@ -1,0 +1,20 @@
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+\begin{tabular}{lllrrr}
+\toprule
+Run & Method & Complexity & E2E & PFS & MFS@4 \\
+\midrule
+Run 1 & Incremental & Simple & 90.0\% & 3.50 & 60.0\% \\
+Run 1 & MetaGPT & Simple & 20.0\% & 0.30 & 0.0\% \\
+Run 2 & Incremental & Simple & 100.0\% & 3.60 & 50.0\% \\
+Run 2 & MetaGPT & Simple & 30.0\% & 0.90 & 20.0\% \\
+Run 3 & Incremental & Simple & 90.0\% & 3.00 & 40.0\% \\
+Run 3 & MetaGPT & Simple & 10.0\% & 0.40 & 10.0\% \\
+Combined & Incremental & Simple & 93.3\% & 3.37 & 50.0\% \\
+Combined & MetaGPT & Simple & 20.0\% & 0.53 & 10.0\% \\
+\bottomrule
+\end{tabular}
+}
+\par\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize Notes: All rows use the same 10 matched Simple tasks; each task has one assessed module per run. Combined values, when present, pool the selected 3 runs within tasks before averaging tasks. E2E requires both the front end and back end to pass build/compilation and startup checks; it does not imply complete business functionality.
+\end{minipage}

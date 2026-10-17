@@ -1,0 +1,24 @@
+| Method | Metric | Estimate | Run SD | 95% CI |
+| --- | --- | --- | --- | --- |
+| Incremental | E2E | 92.2% | 6.9 pp | [86.7%, 96.7%] |
+| Incremental | PFS (points) | 3.33 | 0.28 | [3.00, 3.65] |
+| Incremental | MFS@4 | 52.1% | 3.3 pp | [43.6%, 60.3%] |
+| Incremental | Tokens | 161,958.7 | 27,608.4 | [151,115.6, 173,131.5] |
+| Waterfall | E2E | 41.1% | 6.9 pp | [32.2%, 50.0%] |
+| Waterfall | PFS (points) | 1.53 | 0.24 | [1.19, 1.89] |
+| Waterfall | MFS@4 | 17.8% | 2.7 pp | [11.6%, 24.2%] |
+| Waterfall | Tokens | 288,592.1 | 33,852.4 | [270,455.1, 305,782.9] |
+| Incremental w/o Self-Refinement | E2E | 30.0% | 8.8 pp | [22.2%, 37.8%] |
+| Incremental w/o Self-Refinement | PFS (points) | 1.13 | 0.45 | [0.82, 1.45] |
+| Incremental w/o Self-Refinement | MFS@4 | 8.6% | 5.3 pp | [4.9%, 12.8%] |
+| Incremental w/o Self-Refinement | Tokens | 109,941.0 | 12,728.6 | [105,041.5, 114,974.6] |
+
+Notes: n=30 paired benchmark tasks with 3 selected runs per task and method; repeat outcomes are not independent tasks. Run SD is the sample SD of the selected run aggregates (ddof=1), not bootstrap SE or a precise estimate of LLM stochastic variance.
+
+Pointwise 95% percentile CIs use 30,000 paired, complexity-stratified task-cluster bootstrap samples; all selected repeats and modules remain inside each sampled task. These intervals condition on the observed repeats.
+
+E2E/PFS/Tokens use equal task weights. MFS@4 pools module successes and totals; its pooled estimate can differ from the mean of run-level rates. Rate SDs use percentage points (pp).
+
+Analysis RNG seed 12138 makes resampling reproducible; it is not an LLM generation seed. * A zero-width empirical CI does not establish certainty beyond these tasks/runs.
+
+E2E requires both the front end and back end to pass build/compilation and startup checks; it does not imply complete business functionality. Intervals are not simultaneous and do not establish generalization to arbitrary applications.

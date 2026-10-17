@@ -1,0 +1,20 @@
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+\begin{tabular}{llr}
+\toprule
+Method & Complexity & Avg Tokens \\
+\midrule
+Incremental & Simple & 83,617.6 $\pm$ 6,977.7 \\
+Incremental & Medium & 165,189.5 $\pm$ 37,122.7 \\
+Incremental & Complex & 237,068.9 $\pm$ 42,751.7 \\
+Incremental & Overall & 161,958.7 $\pm$ 27,608.4 \\
+Waterfall & Simple & 118,715.0 $\pm$ 23,910.4 \\
+Waterfall & Medium & 255,743.1 $\pm$ 29,848.3 \\
+Waterfall & Complex & 491,318.2 $\pm$ 89,738.9 \\
+Waterfall & Overall & 288,592.1 $\pm$ 33,852.4 \\
+\bottomrule
+\end{tabular}
+}
+\par\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize Notes: Entries are equal-task-weight combined mean Tokens $\pm$ sample SD of 3 run-level mean Token values (ddof=1), not SE or CI. There are 10 tasks per complexity and 30 overall. Combined boxplot points are task means across runs; boxplot spread is between tasks, not between runs.
+\end{minipage}

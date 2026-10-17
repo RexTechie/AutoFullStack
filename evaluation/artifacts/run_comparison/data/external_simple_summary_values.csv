@@ -1,0 +1,9 @@
+﻿Run,Approach,Category,Projects,ProjectRuns,E2E,PFS,MFS4,PassedRuns,ModuleRecords,ModulesAtLeast4
+Run 1,Incremental,Simple,10,10,0.9,3.5,0.6,9,10,6
+Run 1,MetaGPT,Simple,10,10,0.2,0.3,0.0,2,10,0
+Run 2,Incremental,Simple,10,10,1.0,3.6,0.5,10,10,5
+Run 2,MetaGPT,Simple,10,10,0.3,0.9,0.2,3,10,2
+Run 3,Incremental,Simple,10,10,0.9,3.0,0.4,9,10,4
+Run 3,MetaGPT,Simple,10,10,0.1,0.4,0.1,1,10,1
+Combined,Incremental,Simple,10,30,0.9333333333333333,3.3666666666666663,0.5,28,30,15
+Combined,MetaGPT,Simple,10,30,0.2,0.5333333333333333,0.1,6,30,3

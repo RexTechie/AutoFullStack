@@ -1,0 +1,9 @@
+﻿Run,Method,Complexity,E2E,PFS,MFS@4
+Run 1,Incremental,Simple,90.0%,3.50,60.0%
+Run 1,MetaGPT,Simple,20.0%,0.30,0.0%
+Run 2,Incremental,Simple,100.0%,3.60,50.0%
+Run 2,MetaGPT,Simple,30.0%,0.90,20.0%
+Run 3,Incremental,Simple,90.0%,3.00,40.0%
+Run 3,MetaGPT,Simple,10.0%,0.40,10.0%
+Combined,Incremental,Simple,93.3%,3.37,50.0%
+Combined,MetaGPT,Simple,20.0%,0.53,10.0%
